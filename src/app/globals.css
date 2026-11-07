@@ -23,6 +23,7 @@
   --color-card-foreground: var(--card-foreground);
   --color-card: var(--card);
   --color-flame-deep: var(--flame-deep);
+  --color-navy: var(--navy);
   --color-ink: var(--ink);
   --color-ink-raised: var(--ink-raised);
   --color-ink-foreground: var(--ink-foreground);
@@ -208,4 +209,31 @@
   .animate-flare {
     animation: none;
   }
+}
+
+/* Vũ Hải — light corporate blue, taken from vuhai.co (#0e6ace / #004188 / #F0F5FA). */
+.theme-vuhai {
+  --radius: 0.75rem;
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.27 0.02 255);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.27 0.02 255);
+  --navy: oklch(0.39 0.13 258);
+  --primary: oklch(0.54 0.17 256);
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.971 0.011 245);
+  --secondary-foreground: oklch(0.39 0.13 258);
+  --muted: oklch(0.971 0.011 245);
+  --muted-foreground: oklch(0.5 0.025 255);
+  --accent: oklch(0.971 0.011 245);
+  --accent-foreground: oklch(0.39 0.13 258);
+  --border: oklch(0.91 0.012 250);
+  --input: oklch(0.91 0.012 250);
+  --ring: oklch(0.54 0.17 256);
+  --ink: oklch(0.3 0.1 258);
+  --ink-raised: oklch(0.36 0.11 258);
+  --ink-foreground: oklch(1 0 0);
+  --ink-muted: oklch(0.84 0.035 250);
+  --ink-border: oklch(1 0 0 / 16%);
+  --live: oklch(0.72 0.17 150);
 }

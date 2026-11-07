@@ -126,7 +126,7 @@ is what the pipeline maps `<pre>` to — keep it.
 
 Code that predates a convention and is deliberately **not** being renamed:
 
-- PascalCase component files under `app/_components/` and
+- PascalCase component files under `app/dc-petrol/_components/` and
   `app/showcase/_components/` — components are otherwise kebab-case.
 - Components with a `PropsType` suffix (`RevealPropsType`,
   `PageHeaderPropsType`) — use `<ComponentName>Props` for anything new.

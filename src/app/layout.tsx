@@ -1,8 +1,5 @@
 import type { Metadata } from "next";
 import { Barlow, Barlow_Condensed } from "next/font/google";
-import { VersionSwitcher } from "~/components/version-switcher";
-import { companyData } from "~/data/company";
-import { siteDescription } from "~/data/site";
 import "./globals.css";
 
 const body = Barlow({
@@ -18,8 +15,7 @@ const heading = Barlow_Condensed({
 });
 
 export const metadata: Metadata = {
-  title: `${companyData.displayName} | Wholesale Fuels Trading, Singapore`,
-  description: siteDescription,
+  title: "Vu Hai",
 };
 
 export default function RootLayout({
@@ -37,7 +33,6 @@ export default function RootLayout({
     >
       <body className="font-sans antialiased">
         {children}
-        <VersionSwitcher />
       </body>
     </html>
   );

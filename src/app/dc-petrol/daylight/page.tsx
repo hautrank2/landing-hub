@@ -1,8 +1,8 @@
 import { ArrowRight, Check, Navigation } from "lucide-react";
 import Image from "next/image";
-import { CompanyInfo } from "~/app/_components/company-info";
-import { SectionHeading } from "~/app/_components/section-heading";
-import { SiteFooter } from "~/app/_components/site-footer";
+import { CompanyInfo } from "~/app/dc-petrol/_components/company-info";
+import { SectionHeading } from "~/app/dc-petrol/_components/section-heading";
+import { SiteFooter } from "~/app/dc-petrol/_components/site-footer";
 import { Button } from "~/components/ui/button";
 import { Reveal } from "~/components/ui/reveal";
 import { companyData, fullAddress, mapUrl } from "~/data/company";
