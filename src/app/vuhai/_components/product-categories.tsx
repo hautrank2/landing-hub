@@ -14,7 +14,7 @@ export const ProductCategories = () => {
         <SectionHeading
           eyebrow="Danh mục sản phẩm"
           title="Giải pháp công nghệ cho doanh nghiệp, từ hạ tầng AI đến nghiệp vụ"
-          description="AI Server là danh mục chính của Vũ Hải; các giải pháp phần mềm nghiệp vụ có thể kết hợp để tạo thành hệ thống thống nhất."
+          description="Dịch vụ AI và Data center là hai danh mục chính của Vũ Hải; các giải pháp phần mềm nghiệp vụ có thể kết hợp để tạo thành hệ thống thống nhất."
         />
 
         <div className="mt-12 grid gap-6 lg:grid-cols-2">
@@ -43,7 +43,7 @@ export const ProductCategories = () => {
                   ))}
                 </ul>
                 <span className="mt-8 inline-flex items-center gap-2 font-bold">
-                  Xem chi tiết AI Server
+                  Xem chi tiết {lead.title}
                   <ArrowRight className="size-5 transition-transform group-hover:translate-x-1" />
                 </span>
               </div>

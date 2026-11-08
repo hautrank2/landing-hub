@@ -1,5 +1,5 @@
 export type ConsultSectionProps = {
-  /** Anchor id; the home page uses "dang-ky", the AI Server page "tu-van". */
+  /** Anchor id; the home page uses "dang-ky", the AI / Data center pages "tu-van". */
   id: string;
   title: string;
   description: string;

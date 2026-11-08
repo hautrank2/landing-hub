@@ -5,6 +5,7 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import { useRef } from "react";
 import type { Group } from "three";
 import { Bot } from "./bot";
+import { DataCenterHall } from "./data-center";
 import { DataOrbit } from "./data-orbit";
 import { LabelAnchors } from "./label-anchors";
 import { palette } from "./palette";
@@ -24,12 +25,12 @@ const Sway = ({ children }: { children: React.ReactNode }) => {
 };
 
 // Default export so `next/dynamic` can load three.js lazily.
-export default function AiScene({ active, still, labels }: AiSceneProps) {
+export default function AiScene({ active, still, labels, variant, items }: AiSceneProps) {
   return (
     <Canvas
       dpr={[1, 2]}
       frameloop={active ? "always" : "demand"}
-      camera={{ position: [0, 3.8, 15.5], fov: 30 }}
+      camera={{ position: [0, 3.8, variant === "data-center" ? 19 : 15.5], fov: 30 }}
       gl={{ antialias: true, alpha: true }}
     >
       <ambientLight intensity={1.1} />
@@ -49,15 +50,21 @@ export default function AiScene({ active, still, labels }: AiSceneProps) {
             <meshStandardMaterial color={palette.blue} emissive={palette.blue} emissiveIntensity={1.4} />
           </mesh>
 
-          <ServerRack position={[0, 0.02, -0.4]} />
-          <Bot position={[-1.95, 0, 1.2]} rotation={[0, 0.5, 0]} />
-          <SecurityCamera position={[-2.7, 0, -1]} rotation={[0, 0.2, 0]} />
-          <TrafficLight position={[2.5, 0, 0.9]} rotation={[0, -0.35, 0]} />
-          <DataOrbit position={[0, 2.2, -0.4]} />
+          {variant === "data-center" ? (
+            <DataCenterHall />
+          ) : (
+            <>
+              <ServerRack position={[0, 0.02, -0.4]} />
+              <Bot position={[-1.95, 0, 1.2]} rotation={[0, 0.5, 0]} />
+              <SecurityCamera position={[-2.7, 0, -1]} rotation={[0, 0.2, 0]} />
+              <TrafficLight position={[2.5, 0, 0.9]} rotation={[0, -0.35, 0]} />
+              <DataOrbit position={[0, 2.2, -0.4]} />
+            </>
+          )}
 
           <Sparkles count={46} scale={[8, 6, 6]} position={[0, 2.6, 0]} size={4.5} speed={0.45} color={palette.sky} />
 
-          <LabelAnchors targets={labels} />
+          <LabelAnchors targets={labels} items={items} />
         </group>
       </Sway>
 

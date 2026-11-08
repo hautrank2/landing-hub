@@ -1,7 +1,7 @@
 import { useFrame, useThree } from "@react-three/fiber";
 import { type RefObject, useRef } from "react";
 import { type Object3D, Vector3 } from "three";
-import { sceneLabels } from "./labels";
+import type { SceneLabelModel } from "./labels";
 
 const world = new Vector3();
 
@@ -10,7 +10,7 @@ const world = new Vector3();
  * onto the matching DOM label (drei's <Html> mounts a React root per label and trips
  * React 19 during dev remounts).
  */
-export const LabelAnchors = ({ targets }: { targets: RefObject<(HTMLElement | null)[]> }) => {
+export const LabelAnchors = ({ targets, items }: { targets: RefObject<(HTMLElement | null)[]>; items: SceneLabelModel[] }) => {
   const anchors = useRef<(Object3D | null)[]>([]);
   const { camera, size } = useThree();
 
@@ -28,7 +28,7 @@ export const LabelAnchors = ({ targets }: { targets: RefObject<(HTMLElement | nu
 
   return (
     <>
-      {sceneLabels.map((label, index) => (
+      {items.map((label, index) => (
         <object3D
           key={label.text}
           position={label.position}

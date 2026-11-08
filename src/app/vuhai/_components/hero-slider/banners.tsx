@@ -1,8 +1,8 @@
-import { Cpu, FileText, Globe, Mail, Phone, LineChart, Link2, MessagesSquare, ShieldCheck, Sparkles, Boxes, BadgePercent } from "lucide-react";
+import { Cpu, DatabaseBackup, FileText, Server, Snowflake, Zap, Globe, Mail, Phone, LineChart, Link2, MessagesSquare, ShieldCheck, Sparkles, Boxes, BadgePercent } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "~/components/ui/button";
-import { vuhaiAiServerHref, vuhaiContact, vuhaiVanLogisticHref } from "~/data/vuhai";
+import { vuhaiAiHref, vuhaiDataCenterHref, vuhaiContact, vuhaiVanLogisticHref } from "~/data/vuhai";
 import { AiScene } from "../ai-scene";
 
 type BannerFrameProps = {
@@ -66,9 +66,9 @@ const BannerImage = ({ src, alt, width, height }: BannerImageProps) => (
 const outlineButton = "h-12 border-primary bg-white px-7 text-base font-bold text-primary hover:bg-secondary";
 const solidButton = "h-12 px-7 text-base font-bold";
 
-export const AiServerBanner = () => (
+export const AiServiceBanner = () => (
   <BannerFrame
-    badge="AI Server · Cho thuê"
+    badge="Dịch vụ AI · Cho thuê GPU"
     title={
       <>
         Thuê AI Server
@@ -85,14 +85,44 @@ export const AiServerBanner = () => (
     actions={
       <>
         <Button asChild size="lg" className={solidButton}>
-          <Link href={vuhaiAiServerHref}>Khám phá AI Server</Link>
+          <Link href={vuhaiAiHref}>Khám phá dịch vụ AI</Link>
         </Button>
         <Button asChild size="lg" variant="outline" className={outlineButton}>
-          <Link href={`${vuhaiAiServerHref}#tu-van`}>Nhận tư vấn</Link>
+          <Link href={`${vuhaiAiHref}#tu-van`}>Nhận tư vấn</Link>
         </Button>
       </>
     }
     art={<AiScene className="min-h-[22rem] w-full lg:h-full" />}
+  />
+);
+
+export const DataCenterBanner = () => (
+  <BannerFrame
+    badge="Data center · Hạ tầng"
+    title={
+      <>
+        Data center chuyên dụng
+        <br />
+        Điện dự phòng, làm mát, giám sát 24/7
+      </>
+    }
+    points={[
+      { icon: Server, text: "Thuê tủ rack, colocation, private cloud" },
+      { icon: Snowflake, text: "Làm mát chất lỏng, mật độ tới 120 kW/rack" },
+      { icon: Zap, text: "Cấp điện dự phòng 2N" },
+      { icon: DatabaseBackup, text: "Sao lưu, phục hồi thảm hoạ và kết nối mạng" },
+    ]}
+    actions={
+      <>
+        <Button asChild size="lg" className={solidButton}>
+          <Link href={vuhaiDataCenterHref}>Khám phá Data center</Link>
+        </Button>
+        <Button asChild size="lg" variant="outline" className={outlineButton}>
+          <Link href={`${vuhaiDataCenterHref}#tu-van`}>Nhận tư vấn</Link>
+        </Button>
+      </>
+    }
+    art={<AiScene variant="data-center" className="min-h-[22rem] w-full lg:h-full" />}
   />
 );
 

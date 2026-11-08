@@ -30,7 +30,14 @@ const Led = ({ position, color, phase }: LedProps) => {
 const unitCount = 7;
 
 /** Tall GPU rack: navy frame, glowing drive bays, blinking status LEDs, a floating GPU chip on top. */
-export const ServerRack = (props: React.ComponentProps<"group">) => {
+type ServerRackProps = React.ComponentProps<"group"> & {
+  /** Number of drive units; the cabinet grows with it. */
+  units?: number;
+  /** Floating GPU chip above the cabinet (the AI scene hero). */
+  chip?: boolean;
+};
+
+export const ServerRack = ({ units = unitCount, chip: showChip = true, ...props }: ServerRackProps) => {
   const chip = useRef<Group>(null);
 
   useFrame(({ clock }) => {
@@ -42,11 +49,11 @@ export const ServerRack = (props: React.ComponentProps<"group">) => {
 
   return (
     <group {...props}>
-      <RoundedBox args={[1.7, 3.5, 1.2]} radius={0.1} smoothness={4} position={[0, 1.95, 0]}>
+      <RoundedBox args={[1.7, units * 0.46 + 0.28, 1.2]} radius={0.1} smoothness={4} position={[0, (units * 0.46 + 0.28) / 2 + 0.2, 0]}>
         <meshStandardMaterial color={palette.navy} roughness={0.35} metalness={0.35} />
       </RoundedBox>
 
-      {Array.from({ length: unitCount }, (_, i) => {
+      {Array.from({ length: units }, (_, i) => {
         const y = 0.5 + i * 0.46;
         return (
           <group key={i} position={[0, y, 0.61]}>
@@ -71,6 +78,7 @@ export const ServerRack = (props: React.ComponentProps<"group">) => {
         <meshStandardMaterial color={palette.blue} emissive={palette.blue} emissiveIntensity={0.9} />
       </mesh>
 
+      {showChip && (
       <group ref={chip} position={[0, 4.1, 0]}>
         <RoundedBox args={[0.9, 0.12, 0.9]} radius={0.05} smoothness={3}>
           <meshStandardMaterial color={palette.white} roughness={0.25} metalness={0.4} />
@@ -90,6 +98,7 @@ export const ServerRack = (props: React.ComponentProps<"group">) => {
           </mesh>,
         ])}
       </group>
+      )}
     </group>
   );
 };

@@ -4,7 +4,7 @@ import { Move3d } from "lucide-react";
 import dynamic from "next/dynamic";
 import { cn } from "~/lib/utils";
 import { useAiScene } from "./hook";
-import { sceneLabels } from "./labels";
+import { sceneLabelData } from "./labels";
 import type { AiSceneViewProps } from "./type";
 
 const Scene = dynamic(() => import("./scene"), {
@@ -17,13 +17,14 @@ const Scene = dynamic(() => import("./scene"), {
 });
 
 /** Transparent 3D canvas — sits straight on the banner background. */
-export const AiScene = ({ className, ...props }: AiSceneViewProps) => {
+export const AiScene = ({ className, variant = "ai", ...props }: AiSceneViewProps) => {
   const { ref, labels, active, still } = useAiScene();
+  const items = sceneLabelData[variant];
 
   return (
     <div ref={ref} className={cn("relative cursor-grab active:cursor-grabbing", className)} {...props}>
-      <Scene active={active} still={still} labels={labels} />
-      {sceneLabels.map((label, index) => (
+      <Scene active={active} still={still} labels={labels} variant={variant} items={items} />
+      {items.map((label, index) => (
         <span
           key={label.text}
           ref={(node) => {

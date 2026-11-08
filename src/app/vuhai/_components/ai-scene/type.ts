@@ -1,6 +1,10 @@
 import type { RefObject } from "react";
+import type { SceneLabelModel, SceneVariant } from "./labels";
 
 export type AiSceneProps = {
+  variant: SceneVariant;
+  /** Label anchors for this variant; their DOM twins are in `labels`. */
+  items: SceneLabelModel[];
   /** DOM labels the scene moves every frame; see `LabelAnchors`. */
   labels: RefObject<(HTMLElement | null)[]>;
   /** False while the banner is off-screen, so the GPU idles. */
@@ -9,4 +13,4 @@ export type AiSceneProps = {
   still: boolean;
 };
 
-export type AiSceneViewProps = React.ComponentProps<"div">;
+export type AiSceneViewProps = React.ComponentProps<"div"> & { variant?: SceneVariant };

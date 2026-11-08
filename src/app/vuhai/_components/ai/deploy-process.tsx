@@ -1,15 +1,20 @@
 import { aiProcessData } from "~/data/ai-server";
-import { SectionHeading } from "../../_components/section-heading";
+import { SectionHeading } from "../section-heading";
 
-export const DeployProcess = () => (
+type DeployProcessProps = {
+  steps?: { step: string; title: string; body: string }[];
+  title?: string;
+};
+
+export const DeployProcess = ({
+  steps = aiProcessData,
+  title = "Từ nhu cầu đến dịch vụ AI chạy thật trong năm bước",
+}: DeployProcessProps) => (
   <section className="py-20">
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <SectionHeading
-        eyebrow="Quy trình triển khai"
-        title="Từ nhu cầu đến dịch vụ AI chạy thật trong năm bước"
-      />
+      <SectionHeading eyebrow="Quy trình triển khai" title={title} />
       <ol className="mt-12 grid gap-6 md:grid-cols-5">
-        {aiProcessData.map((item) => (
+        {steps.map((item) => (
           <li key={item.step} className="relative rounded-2xl border border-border bg-card p-6">
             <span className="text-3xl font-extrabold text-primary">{item.step}</span>
             <h3 className="mt-3 text-lg font-extrabold text-navy">{item.title}</h3>

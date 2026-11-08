@@ -4,6 +4,7 @@ import {
   FileSignature,
   Handshake,
   Layers,
+  Server,
   ReceiptText,
   ScanSearch,
   ShieldCheck,
@@ -20,8 +21,9 @@ import type {
 } from "~/types";
 
 export const vuhaiBase = "/vuhai";
-// AI Server is the lead page for now, so it lives at the Vũ Hải root; the former home is VAN-Logistic.
-export const vuhaiAiServerHref = vuhaiBase;
+// The root shows both lead services; the former home is VAN-Logistic.
+export const vuhaiAiHref = `${vuhaiBase}/dich-vu-ai`;
+export const vuhaiDataCenterHref = `${vuhaiBase}/data-center`;
 export const vuhaiVanLogisticHref = `${vuhaiBase}/van-logistic`;
 const legacy = "https://vuhai.co";
 
@@ -41,10 +43,17 @@ export const vuhaiNavData: VuhaiNavModel[] = [
     href: `${vuhaiVanLogisticHref}#danh-muc`,
     grid: [
       {
-        label: "AI Server",
+        label: "Dịch vụ AI",
         subtitle: "Thuê GPU server, triển khai dịch vụ AI",
-        href: vuhaiAiServerHref,
+        href: vuhaiAiHref,
         icon: Cpu,
+        badge: "Mới",
+      },
+      {
+        label: "Data center",
+        subtitle: "Thuê tủ rack, private cloud, kết nối mạng",
+        href: vuhaiDataCenterHref,
+        icon: Server,
         badge: "Mới",
       },
       {
@@ -110,14 +119,14 @@ export const vuhaiFooterLinks = [
   { label: "Chính sách hỗ trợ", href: `${legacy}/chinh-sach-ho-tro-san-pham/`, external: true },
 ];
 
-// "Danh mục sản phẩm" — AI Server is the lead category.
+// "Danh mục sản phẩm" — Dịch vụ AI and Data center lead.
 export const vuhaiCategoryData: VuhaiCategoryModel[] = [
   {
-    title: "AI Server",
+    title: "Dịch vụ AI",
     subtitle: "Thuê hạ tầng GPU cho dịch vụ AI",
     description:
       "Máy chủ GPU cấu hình cao cho doanh nghiệp thuê theo nhu cầu, kèm hỗ trợ triển khai mô hình AI, chatbot nội bộ và các dịch vụ thị giác máy tính.",
-    href: vuhaiAiServerHref,
+    href: vuhaiAiHref,
     icon: Cpu,
     badge: "Danh mục chính",
     highlights: [
@@ -125,6 +134,16 @@ export const vuhaiCategoryData: VuhaiCategoryModel[] = [
       "Thuê theo giờ, theo tháng hoặc cụm riêng",
       "Hỗ trợ triển khai và vận hành 24/7",
     ],
+  },
+  {
+    title: "Data center",
+    subtitle: "Thuê tủ rack, private cloud, kết nối mạng",
+    description:
+      "Phòng máy chuyên dụng với điện dự phòng 2N, làm mát chất lỏng và giám sát 24/7 cho hệ thống của doanh nghiệp.",
+    href: vuhaiDataCenterHref,
+    icon: Server,
+    badge: "Danh mục chính",
+    highlights: ["Thuê tủ rack, colocation", "Private cloud, sao lưu và phục hồi", "Mật độ tới 120 kW/rack"],
   },
   {
     title: "VAN-Logistic",
@@ -377,7 +396,7 @@ export const vuhaiFaqData: VuhaiFaqModel[] = [
   {
     question: "Doanh nghiệp có thể thuê AI Server để chạy dịch vụ AI riêng không?",
     answer:
-      "Có. Vũ Hải cho thuê máy chủ GPU (theo giờ, theo tháng hoặc cụm riêng) và hỗ trợ cài đặt môi trường, triển khai mô hình, vận hành. Xem chi tiết tại trang AI Server.",
+      "Có. Vũ Hải cho thuê máy chủ GPU (theo giờ, theo tháng hoặc cụm riêng) và hỗ trợ cài đặt môi trường, triển khai mô hình, vận hành. Xem chi tiết tại trang Dịch vụ AI.",
   },
   {
     question: "Làm thế nào để được tư vấn giải pháp phù hợp?",
