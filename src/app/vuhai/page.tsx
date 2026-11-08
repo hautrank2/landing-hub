@@ -1,54 +1,43 @@
-import { vuhaiFaqData } from "~/data/vuhai";
+import type { Metadata } from "next";
+import { aiFaqData } from "~/data/ai-server";
 import { ConsultSection } from "./_components/consult-section";
-import { Ecosystem } from "./_components/ecosystem";
 import { FaqList } from "./_components/faq-list";
-import { Guides } from "./_components/guides";
-import { AiServerBanner, PartnerBanner, PricingBanner, VanLogisticBanner } from "./_components/hero-slider/banners";
-import { HeroSlider } from "./_components/hero-slider";
-import { NewsUpdates } from "./_components/news-updates";
-import { Pricing } from "./_components/pricing";
-import { ProductCategories } from "./_components/product-categories";
-import { ProductOverview } from "./_components/product-overview";
 import { SectionHeading } from "./_components/section-heading";
-import { Trust } from "./_components/trust";
-import { WhyVuhai } from "./_components/why-vuhai";
+import { AiHero } from "./_components/ai/ai-hero";
+import { DeployProcess } from "./_components/ai/deploy-process";
+import { Infrastructure } from "./_components/ai/infrastructure";
+import { RentalModels } from "./_components/ai/rental-models";
+import { SpecSheet } from "./_components/ai/spec-sheet";
+import { UseCases } from "./_components/ai/use-cases";
+import { WhyRent } from "./_components/ai/why-rent";
 
-// AI Server is the lead category, so its banner is the first slide.
-const slides = [
-  { id: "ai-server", label: "AI Server", content: <AiServerBanner /> },
-  { id: "van-logistic", label: "VAN-Logistic", content: <VanLogisticBanner /> },
-  { id: "gia", label: "Chính sách giá", content: <PricingBanner /> },
-  { id: "hop-tac", label: "Hợp tác thương hiệu", content: <PartnerBanner /> },
-];
+export const metadata: Metadata = {
+  title: "AI Server cho thuê | Vũ Hải",
+  description:
+    "Thuê máy chủ GPU (NVIDIA HGX/GB200) theo giờ, theo tháng hoặc cụm riêng, kèm hỗ trợ triển khai chatbot, RAG, thị giác máy tính và API suy luận.",
+};
 
 export default function VuhaiPage() {
   return (
     <>
-      <HeroSlider slides={slides} />
-      <ProductCategories />
-      <NewsUpdates />
-      <ProductOverview />
-      <Ecosystem />
-      <Trust />
-      <Pricing />
-      <WhyVuhai />
-      <Guides />
-      <section className="pb-20">
+      <AiHero />
+      <WhyRent />
+      <RentalModels />
+      <SpecSheet />
+      <UseCases />
+      <Infrastructure />
+      <DeployProcess />
+      <section className="bg-secondary pt-20 pb-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <SectionHeading
-            align="center"
-            eyebrow="Câu hỏi thường gặp"
-            title="Giải đáp nhanh về giải pháp và phương án triển khai"
-          />
-          <FaqList items={vuhaiFaqData} />
+          <SectionHeading align="center" eyebrow="Câu hỏi thường gặp" title="Giải đáp về thuê AI Server" />
+          <FaqList items={aiFaqData} />
         </div>
       </section>
       <ConsultSection
-        id="dang-ky"
-        topic="Vũ Hải"
-        withTaxCode
-        title="Sẵn sàng lựa chọn giải pháp phù hợp?"
-        description="Để lại thông tin để đội ngũ Vũ Hải tư vấn phương án phù hợp với quy trình, dữ liệu và nhu cầu vận hành thực tế."
+        id="tu-van"
+        topic="AI Server"
+        title="Nhận tư vấn và báo giá AI Server"
+        description="Cho chúng tôi biết mục tiêu AI, quy mô dữ liệu và thời gian dự kiến; Vũ Hải đề xuất cấu hình và phương án thuê phù hợp."
       />
     </>
   );

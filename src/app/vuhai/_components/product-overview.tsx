@@ -2,7 +2,7 @@ import { Check } from "lucide-react";
 import Link from "next/link";
 import { Button } from "~/components/ui/button";
 import { Reveal } from "~/components/ui/reveal";
-import { vuhaiBase, vuhaiCapabilityData } from "~/data/vuhai";
+import { vuhaiVanLogisticHref, vuhaiCapabilityData } from "~/data/vuhai";
 import { SectionHeading } from "./section-heading";
 
 export const ProductOverview = () => (
@@ -22,10 +22,10 @@ export const ProductOverview = () => (
           </p>
           <div className="mt-7 flex flex-wrap gap-3">
             <Button asChild size="lg" className="h-11 px-6 text-base font-bold">
-              <Link href={`${vuhaiBase}#tinh-nang`}>Khám phá tính năng</Link>
+              <Link href={`${vuhaiVanLogisticHref}#tinh-nang`}>Khám phá tính năng</Link>
             </Button>
             <Button asChild size="lg" variant="outline" className="h-11 border-primary px-6 text-base font-bold text-primary">
-              <Link href={`${vuhaiBase}#dang-ky`}>Dùng thử miễn phí</Link>
+              <Link href={`${vuhaiVanLogisticHref}#dang-ky`}>Dùng thử miễn phí</Link>
             </Button>
           </div>
         </div>

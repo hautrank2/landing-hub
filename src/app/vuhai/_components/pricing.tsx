@@ -1,7 +1,7 @@
 import { Check } from "lucide-react";
 import Link from "next/link";
 import { Button } from "~/components/ui/button";
-import { vuhaiBase, vuhaiPlansData } from "~/data/vuhai";
+import { vuhaiVanLogisticHref, vuhaiPlansData } from "~/data/vuhai";
 import { SectionHeading } from "./section-heading";
 
 const { standard, addons, customize, erpScope } = vuhaiPlansData;
@@ -42,7 +42,7 @@ export const Pricing = () => (
             ))}
           </dl>
           <Button asChild size="lg" className="mt-6 h-11 w-full text-base font-bold">
-            <Link href={`${vuhaiBase}#dang-ky`}>Tư vấn gói Thương mại</Link>
+            <Link href={`${vuhaiVanLogisticHref}#dang-ky`}>Tư vấn gói Thương mại</Link>
           </Button>
         </div>
 

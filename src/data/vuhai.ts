@@ -20,7 +20,9 @@ import type {
 } from "~/types";
 
 export const vuhaiBase = "/vuhai";
-export const vuhaiAiServerHref = `${vuhaiBase}/ai-server`;
+// AI Server is the lead page for now, so it lives at the Vũ Hải root; the former home is VAN-Logistic.
+export const vuhaiAiServerHref = vuhaiBase;
+export const vuhaiVanLogisticHref = `${vuhaiBase}/van-logistic`;
 const legacy = "https://vuhai.co";
 
 export const vuhaiContact = {
@@ -36,7 +38,7 @@ export const vuhaiNavData: VuhaiNavModel[] = [
   { label: "Trang chủ", href: vuhaiBase },
   {
     label: "Giải pháp",
-    href: `${vuhaiBase}#danh-muc`,
+    href: `${vuhaiVanLogisticHref}#danh-muc`,
     grid: [
       {
         label: "AI Server",
@@ -68,6 +70,7 @@ export const vuhaiNavData: VuhaiNavModel[] = [
       },
     ],
   },
+  { label: "VAN-Logistic", href: vuhaiVanLogisticHref },
   {
     label: "Hướng dẫn",
     href: `${legacy}/video/`,
@@ -79,11 +82,10 @@ export const vuhaiNavData: VuhaiNavModel[] = [
         external: true,
       },
       { label: "Video hướng dẫn", href: `${legacy}/video/`, external: true },
-      { label: "Hỗ trợ trực tuyến", href: `${vuhaiBase}#lien-he` },
+      { label: "Hỗ trợ trực tuyến", href: `${vuhaiBase}#tu-van` },
       { label: "Tải về", href: `${legacy}/download/`, external: true },
     ],
   },
-  { label: "Báo giá", href: `${vuhaiBase}#bang-gia` },
   {
     label: "Tin tức",
     href: `${legacy}/tin-tuc/`,
@@ -129,7 +131,7 @@ export const vuhaiCategoryData: VuhaiCategoryModel[] = [
     subtitle: "Nghiệp vụ xuất nhập khẩu, C/O, Trừ lùi",
     description:
       "Nền tảng quản lý hồ sơ, chứng từ, nguyên phụ liệu và Trừ lùi theo từng bộ hồ sơ cho doanh nghiệp xuất nhập khẩu.",
-    href: `${vuhaiBase}#gioi-thieu`,
+    href: `${vuhaiVanLogisticHref}#gioi-thieu`,
     icon: Truck,
     highlights: ["Hồ sơ đề nghị cấp C/O", "Trừ lùi nguyên phụ liệu", "Trợ lý AI tích hợp"],
   },

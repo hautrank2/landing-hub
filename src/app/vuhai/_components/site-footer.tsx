@@ -1,6 +1,6 @@
 import { Mail, Phone } from "lucide-react";
 import Link from "next/link";
-import { vuhaiAiServerHref, vuhaiBase, vuhaiContact, vuhaiFooterLinks } from "~/data/vuhai";
+import { vuhaiAiServerHref, vuhaiBase, vuhaiContact, vuhaiFooterLinks, vuhaiVanLogisticHref } from "~/data/vuhai";
 import { Logo } from "./logo";
 
 export const SiteFooter = () => (
@@ -36,17 +36,17 @@ export const SiteFooter = () => (
             </Link>
           </li>
           <li>
-            <Link href={`${vuhaiBase}#gioi-thieu`} className="hover:text-white">
+            <Link href={`${vuhaiVanLogisticHref}#gioi-thieu`} className="hover:text-white">
               VAN-Logistic
             </Link>
           </li>
           <li>
-            <Link href={`${vuhaiBase}#bang-gia`} className="hover:text-white">
+            <Link href={`${vuhaiVanLogisticHref}#bang-gia`} className="hover:text-white">
               Bảng giá
             </Link>
           </li>
           <li>
-            <Link href={`${vuhaiBase}#lien-he`} className="hover:text-white">
+            <Link href={`${vuhaiBase}#tu-van`} className="hover:text-white">
               Liên hệ
             </Link>
           </li>

@@ -116,7 +116,7 @@ export const SiteHeader = ({ items = vuhaiNavData }: SiteHeaderProps) => {
             {vuhaiContact.hotline}
           </a>
           <Button asChild className="hidden h-10 px-5 text-sm font-bold sm:inline-flex">
-            <Link href={`${vuhaiBase}#dang-ky`}>Dùng thử</Link>
+            <Link href={`${vuhaiBase}#tu-van`}>Dùng thử</Link>
           </Button>
           <button
             type="button"
@@ -189,7 +189,7 @@ export const SiteHeader = ({ items = vuhaiNavData }: SiteHeaderProps) => {
             );
           })}
           <Button asChild className="mt-5 w-full font-bold">
-            <Link href={`${vuhaiBase}#dang-ky`} onClick={close}>
+            <Link href={`${vuhaiBase}#tu-van`} onClick={close}>
               Dùng thử miễn phí
             </Link>
           </Button>

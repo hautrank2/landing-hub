@@ -1,9 +1,8 @@
 import { ArrowRight, Phone } from "lucide-react";
-import Link from "next/link";
 import { Button } from "~/components/ui/button";
 import { aiHeroStatData } from "~/data/ai-server";
-import { vuhaiBase, vuhaiContact } from "~/data/vuhai";
-import { GpuArt } from "../../_components/gpu-art";
+import { vuhaiContact } from "~/data/vuhai";
+import { AiScene } from "../ai-scene";
 
 export const AiHero = () => (
   <section id="top" className="relative isolate overflow-hidden bg-ink text-ink-foreground">
@@ -12,14 +11,7 @@ export const AiHero = () => (
 
     <div className="mx-auto grid max-w-7xl items-center gap-10 px-4 py-16 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:px-8 lg:py-24">
       <div>
-        <nav aria-label="Đường dẫn" className="text-sm text-ink-muted">
-          <Link href={vuhaiBase} className="hover:text-white">
-            Trang chủ
-          </Link>
-          <span className="mx-2">/</span>
-          <span>AI Server</span>
-        </nav>
-        <p className="mt-6 inline-flex rounded-full bg-primary px-4 py-1.5 text-sm font-bold tracking-wider uppercase">
+        <p className="inline-flex rounded-full bg-primary px-4 py-1.5 text-sm font-bold tracking-wider uppercase">
           Danh mục chính · Cho thuê
         </p>
         <h1 className="mt-5 text-4xl leading-[1.1] font-extrabold text-balance sm:text-5xl lg:text-6xl">
@@ -47,7 +39,7 @@ export const AiHero = () => (
           </Button>
         </div>
       </div>
-      <GpuArt className="mx-auto max-h-[26rem]" />
+      <AiScene className="min-h-[22rem] w-full lg:h-[32rem]" />
     </div>
 
     <dl className="border-t border-ink-border">

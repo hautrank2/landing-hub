@@ -2,7 +2,7 @@ import { Cpu, FileText, Globe, Mail, Phone, LineChart, Link2, MessagesSquare, Sh
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "~/components/ui/button";
-import { vuhaiAiServerHref, vuhaiBase, vuhaiContact } from "~/data/vuhai";
+import { vuhaiAiServerHref, vuhaiContact, vuhaiVanLogisticHref } from "~/data/vuhai";
 import { AiScene } from "../ai-scene";
 
 type BannerFrameProps = {
@@ -115,10 +115,10 @@ export const VanLogisticBanner = () => (
     actions={
       <>
         <Button asChild size="lg" className={solidButton}>
-          <Link href={`${vuhaiBase}#tinh-nang`}>Khám phá tính năng</Link>
+          <Link href={`${vuhaiVanLogisticHref}#tinh-nang`}>Khám phá tính năng</Link>
         </Button>
         <Button asChild size="lg" variant="outline" className={outlineButton}>
-          <Link href={`${vuhaiBase}#dang-ky`}>Dùng thử miễn phí</Link>
+          <Link href={`${vuhaiVanLogisticHref}#dang-ky`}>Dùng thử miễn phí</Link>
         </Button>
       </>
     }
@@ -145,10 +145,10 @@ export const PricingBanner = () => (
     actions={
       <>
         <Button asChild size="lg" className={solidButton}>
-          <Link href={`${vuhaiBase}#bang-gia`}>Xem bảng giá</Link>
+          <Link href={`${vuhaiVanLogisticHref}#bang-gia`}>Xem bảng giá</Link>
         </Button>
         <Button asChild size="lg" variant="outline" className={outlineButton}>
-          <Link href={`${vuhaiBase}#dang-ky`}>Nhận tư vấn</Link>
+          <Link href={`${vuhaiVanLogisticHref}#dang-ky`}>Nhận tư vấn</Link>
         </Button>
       </>
     }
