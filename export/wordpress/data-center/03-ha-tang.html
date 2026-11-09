@@ -1,0 +1,72 @@
+<!-- ===== Vũ Hải — 03. Data center — Hạ tầng & vận hành. Dán vào block "HTML tùy chỉnh" ===== -->
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800&display=swap&subset=vietnamese" rel="stylesheet">
+<style>
+  .vhp{--vh-primary:#0e6ace;--vh-navy:#004188;--vh-secondary:#f0f5fa;--vh-fg:#202730;--vh-muted:#5a6472;--vh-border:#dbe2e9;--vh-ink:#062b5f;--vh-ink-raised:#123b75;--vh-ink-muted:#c0d0e4;--vh-ink-border:rgba(255,255,255,.16);
+    position:relative;width:100vw;margin-left:calc(50% - 50vw);padding:5rem 0;background:#fff;font-family:"Nunito Sans",system-ui,sans-serif;color:var(--vh-fg);box-sizing:border-box;scroll-margin-top:6rem}
+  .vhp *,.vhp *::before,.vhp *::after{box-sizing:border-box}
+  .vhp h1,.vhp h2,.vhp h3,.vhp p,.vhp ul,.vhp ol,.vhp dl,.vhp dt,.vhp dd{margin:0;padding:0}
+  .vhp ul,.vhp ol{list-style:none}
+  .vhp a{text-decoration:none}
+  .vhp svg{display:block}
+  .vhp--alt{background:var(--vh-secondary)}
+  .vhp--ink{background:var(--vh-ink);color:#fff}
+  .vhp__wrap{max-width:80rem;margin:0 auto;padding:0 1rem}
+  .vhp-head{max-width:48rem}
+  .vhp-head--center{margin:0 auto;text-align:center}
+  .vhp-eyebrow{font-size:.875rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--vh-primary)}
+  .vhp-title{margin-top:.5rem!important;font-size:1.875rem;line-height:1.25;font-weight:800;color:var(--vh-navy);text-wrap:balance}
+  .vhp-desc{margin-top:1rem!important;font-size:1.125rem;line-height:1.65;color:var(--vh-muted)}
+  .vhp--ink .vhp-eyebrow,.vhp--ink .vhp-desc{color:var(--vh-ink-muted)}
+  .vhp--ink .vhp-title{color:#fff}
+  .vhp-grid{margin-top:2.5rem;display:grid;gap:1.25rem}
+  .vhp-card{display:flex;flex-direction:column;border-radius:1rem;background:#fff;padding:1.5rem;box-shadow:0 1px 3px rgba(0,0,0,.06)}
+  .vhp-card--line{border:1px solid var(--vh-border);box-shadow:none}
+  .vhp-card--row{flex-direction:row;gap:1.25rem}
+  .vhp-icon{display:grid;place-items:center;flex-shrink:0;width:3rem;height:3rem;border-radius:.75rem;background:var(--vh-secondary);color:var(--vh-primary)}
+  .vhp-icon svg{width:1.5rem;height:1.5rem}
+  .vhp-card h3{margin-top:1rem!important;font-size:1.25rem;font-weight:800;color:var(--vh-navy)}
+  .vhp-card--row h3{margin-top:0!important}
+  .vhp-card--sm h3{font-size:1.125rem}
+  .vhp-card p{margin-top:.5rem!important;line-height:1.65;color:var(--vh-muted)}
+  .vhp-checks{margin-top:1.25rem!important;display:grid;gap:.625rem;font-size:.875rem;flex:1;align-content:start}
+  .vhp-checks li{display:flex;align-items:flex-start;gap:.5rem}
+  .vhp-checks svg{margin-top:.125rem;width:1rem;height:1rem;flex-shrink:0;color:var(--vh-primary)}
+  .vhp-more{margin-top:1.5rem;font-weight:700;color:var(--vh-primary)!important}
+  .vhp-more:hover{text-decoration:underline}
+  .vhp-tag{border-radius:9999px;background:var(--vh-secondary);padding:.25rem .75rem;font-size:.75rem;font-weight:700;color:var(--vh-primary)}
+  .vhp-between{display:flex;align-items:center;justify-content:space-between}
+  @media (min-width:640px){.vhp__wrap{padding:0 1.5rem}.vhp-title{font-size:2.25rem}.vhp-grid--4{grid-template-columns:repeat(2,1fr)}}
+  @media (min-width:768px){.vhp-grid--4md,.vhp-grid--2{grid-template-columns:repeat(2,1fr)}}
+  @media (min-width:1024px){.vhp__wrap{padding:0 2rem}.vhp-grid--4{grid-template-columns:repeat(4,1fr)}}
+  @media (min-width:1280px){.vhp-grid--4md{grid-template-columns:repeat(4,1fr)}}
+</style>
+<style>
+  .vhp-fac{border:1px solid var(--vh-ink-border);border-radius:1rem;background:var(--vh-ink-raised);padding:1.5rem}
+  .vhp-fac svg{width:1.75rem;height:1.75rem;color:#7dd3fc}
+  .vhp-fac h3{margin-top:1rem!important;font-size:1.125rem;font-weight:800;color:#fff}
+  .vhp-fac p{margin-top:.5rem!important;line-height:1.6;color:var(--vh-ink-muted)}
+  .vhp-sectors{margin-top:2.5rem}
+  .vhp-sectors__label{font-size:.875rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--vh-ink-muted)}
+  .vhp-sectors ul{margin-top:.75rem!important;display:flex;flex-wrap:wrap;gap:.625rem}
+  .vhp-sectors li{border:1px solid var(--vh-ink-border);border-radius:9999px;padding:.375rem 1rem;font-size:.875rem;font-weight:600}
+</style>
+<section class="vhp vhp--ink">
+  <div class="vhp__wrap">
+    <div class="vhp-head">
+      <p class="vhp-eyebrow">Hạ tầng &amp; vận hành</p>
+      <h2 class="vhp-title">Phòng máy thiết kế cho tải mật độ cao</h2>
+      <p class="vhp-desc">Làm mát chất lỏng, điện dự phòng và mạng băng thông cao giúp hệ thống chạy ổn định ở mật độ tới 120 kW/rack.</p>
+    </div>
+    <div class="vhp-grid vhp-grid--4">
+      <div class="vhp-fac"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m10 20-1.25-2.5L6 18"/><path d="M10 4 8.75 6.5 6 6"/><path d="m14 20 1.25-2.5L18 18"/><path d="m14 4 1.25 2.5L18 6"/><path d="m17 21-3-6h-4"/><path d="m17 3-3 6 1.5 3"/><path d="M2 12h6.5L10 9"/><path d="m20 10-1.5 2 1.5 2"/><path d="M22 12h-6.5L14 15"/><path d="m4 10 1.5 2L4 14"/><path d="m7 21 3-6-1.5-3"/><path d="m7 3 3 6h4"/></svg><h3>Làm mát chất lỏng</h3><p>Direct-to-Chip liquid cooling cho tải GPU mật độ cao, PUE thiết kế dưới 1,15.</p></div>
+      <div class="vhp-fac"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15.914 4a1.5 1.5 0 00-2.474-1.561l-9 9A1.5 1.5 0 005.5 14h4.002a.5.5 0 01.471.666L8.086 20a1.5 1.5 0 002.475 1.56l9-9A1.5 1.5 0 0018.5 10h-3.997a.5.5 0 01-.472-.667z"/></svg><h3>Điện dự phòng 2N</h3><p>Hai đường cấp điện độc lập, UPS và máy phát giúp tải quan trọng không gián đoạn.</p></div>
+      <div class="vhp-fac"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg><h3>An ninh nhiều lớp</h3><p>Kiểm soát ra vào, camera giám sát và phân khu truy cập theo từng khách hàng.</p></div>
+      <div class="vhp-fac"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="16" y="16" width="6" height="6" rx="1"/><rect x="2" y="16" width="6" height="6" rx="1"/><rect x="9" y="2" width="6" height="6" rx="1"/><path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3"/><path d="M12 12V8"/></svg><h3>Mạng non-blocking</h3><p>Kiến trúc mạng băng thông cao, độ trễ thấp giữa các node và ra Internet.</p></div>
+    </div>
+    <div class="vhp-sectors">
+      <p class="vhp-sectors__label">Lĩnh vực phục vụ</p>
+      <ul><li>Tài chính – Ngân hàng</li><li>Cơ quan nhà nước</li><li>Y tế</li><li>Sản xuất &amp; Logistics</li><li>Viễn thông</li><li>Doanh nghiệp xuất nhập khẩu</li></ul>
+    </div>
+  </div>
+</section>
+<!-- ===== /03. Data center — Hạ tầng & vận hành ===== -->

@@ -1,0 +1,384 @@
+<!-- ===== Vũ Hải [EN] — Toàn trang Dịch vụ AI. Dán cả file vào MỘT block "HTML tùy chỉnh" ===== -->
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  .vhp{--vh-primary:#0e6ace;--vh-navy:#004188;--vh-secondary:#f0f5fa;--vh-fg:#202730;--vh-muted:#5a6472;--vh-border:#dbe2e9;--vh-ink:#062b5f;--vh-ink-raised:#123b75;--vh-ink-muted:#c0d0e4;--vh-ink-border:rgba(255,255,255,.16);
+    position:relative;width:100vw;margin-left:calc(50% - 50vw);padding:5rem 0;background:#fff;font-family:"Nunito Sans",system-ui,sans-serif;color:var(--vh-fg);box-sizing:border-box;scroll-margin-top:6rem}
+  .vhp *,.vhp *::before,.vhp *::after{box-sizing:border-box}
+  .vhp h1,.vhp h2,.vhp h3,.vhp p,.vhp ul,.vhp ol,.vhp dl,.vhp dt,.vhp dd{margin:0;padding:0}
+  .vhp ul,.vhp ol{list-style:none}
+  .vhp a{text-decoration:none}
+  .vhp svg{display:block}
+  .vhp--alt{background:var(--vh-secondary)}
+  .vhp--ink{background:var(--vh-ink);color:#fff}
+  .vhp__wrap{max-width:80rem;margin:0 auto;padding:0 1rem}
+  .vhp-head{max-width:48rem}
+  .vhp-head--center{margin:0 auto;text-align:center}
+  .vhp-eyebrow{font-size:.875rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--vh-primary)}
+  .vhp-title{margin-top:.5rem!important;font-size:1.875rem;line-height:1.25;font-weight:800;color:var(--vh-navy);text-wrap:balance}
+  .vhp-desc{margin-top:1rem!important;font-size:1.125rem;line-height:1.65;color:var(--vh-muted)}
+  .vhp--ink .vhp-eyebrow,.vhp--ink .vhp-desc{color:var(--vh-ink-muted)}
+  .vhp--ink .vhp-title{color:#fff}
+  .vhp-grid{margin-top:2.5rem;display:grid;gap:1.25rem}
+  .vhp-card{display:flex;flex-direction:column;border-radius:1rem;background:#fff;padding:1.5rem;box-shadow:0 1px 3px rgba(0,0,0,.06)}
+  .vhp-card--line{border:1px solid var(--vh-border);box-shadow:none}
+  .vhp-card--row{flex-direction:row;gap:1.25rem}
+  .vhp-icon{display:grid;place-items:center;flex-shrink:0;width:3rem;height:3rem;border-radius:.75rem;background:var(--vh-secondary);color:var(--vh-primary)}
+  .vhp-icon svg{width:1.5rem;height:1.5rem}
+  .vhp-card h3{margin-top:1rem!important;font-size:1.25rem;font-weight:800;color:var(--vh-navy)}
+  .vhp-card--row h3{margin-top:0!important}
+  .vhp-card--sm h3{font-size:1.125rem}
+  .vhp-card p{margin-top:.5rem!important;line-height:1.65;color:var(--vh-muted)}
+  .vhp-checks{margin-top:1.25rem!important;display:grid;gap:.625rem;font-size:.875rem;flex:1;align-content:start}
+  .vhp-checks li{display:flex;align-items:flex-start;gap:.5rem}
+  .vhp-checks svg{margin-top:.125rem;width:1rem;height:1rem;flex-shrink:0;color:var(--vh-primary)}
+  .vhp-more{margin-top:1.5rem;font-weight:700;color:var(--vh-primary)!important}
+  .vhp-more:hover{text-decoration:underline}
+  .vhp-tag{border-radius:9999px;background:var(--vh-secondary);padding:.25rem .75rem;font-size:.75rem;font-weight:700;color:var(--vh-primary)}
+  .vhp-between{display:flex;align-items:center;justify-content:space-between}
+  @media (min-width:640px){.vhp__wrap{padding:0 1.5rem}.vhp-title{font-size:2.25rem}.vhp-grid--4{grid-template-columns:repeat(2,1fr)}}
+  @media (min-width:768px){.vhp-grid--4md,.vhp-grid--2{grid-template-columns:repeat(2,1fr)}}
+  @media (min-width:1024px){.vhp__wrap{padding:0 2rem}.vhp-grid--4{grid-template-columns:repeat(4,1fr)}}
+  @media (min-width:1280px){.vhp-grid--4md{grid-template-columns:repeat(4,1fr)}}
+</style>
+
+<!-- ----- 01. Hero ----- -->
+<style>
+  .vhp-hero{padding:0;overflow:hidden;isolation:isolate}
+  .vhp-hero::before{content:"";position:absolute;inset:0;z-index:-1;background-image:linear-gradient(to right,rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(to bottom,rgba(255,255,255,.05) 1px,transparent 1px);background-size:64px 64px;-webkit-mask-image:linear-gradient(to bottom,#000,transparent);mask-image:linear-gradient(to bottom,#000,transparent)}
+  .vhp-hero::after{content:"";position:absolute;top:-8rem;right:-8rem;z-index:-1;width:32rem;height:32rem;border-radius:9999px;background:rgba(14,106,206,.3);filter:blur(64px)}
+  .vhp-hero__grid{display:grid;align-items:center;gap:2.5rem;padding-top:4rem;padding-bottom:4rem}
+  .vhp-hero__badge{display:inline-flex;border-radius:9999px;background:var(--vh-primary);padding:.375rem 1rem;font-size:.875rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase}
+  .vhp-hero h1{margin-top:1.25rem!important;font-size:2.25rem;line-height:1.1;font-weight:800;color:#fff;text-wrap:balance}
+  .vhp-hero__lead{margin-top:1.5rem!important;max-width:36rem;font-size:1.125rem;line-height:1.65;color:var(--vh-ink-muted)}
+  .vhp-hero__actions{margin-top:2rem;display:flex;flex-wrap:wrap;gap:.75rem}
+  .vhp-btn{display:inline-flex;align-items:center;gap:.5rem;height:3rem;padding:0 1.75rem;border-radius:.75rem;font-size:1rem;font-weight:700;transition:background .2s}
+  .vhp-btn svg{width:1.25rem;height:1.25rem}
+  .vhp-btn--light{background:#fff;color:var(--vh-navy)!important}
+  .vhp-btn--light:hover{background:rgba(255,255,255,.9)}
+  .vhp-btn--ghost{border:1px solid rgba(255,255,255,.4);color:#fff!important}
+  .vhp-btn--ghost:hover{background:rgba(255,255,255,.1)}
+  .vhp-hero__art{display:flex;align-items:center;justify-content:center;min-height:22rem}
+  .vhp-hero__art img{max-width:100%;max-height:32rem;width:auto;height:auto;object-fit:contain}
+  .vhp-hero__stats{border-top:1px solid var(--vh-ink-border)}
+  .vhp-hero__stats .vhp__wrap{display:grid;grid-template-columns:repeat(2,1fr)}
+  .vhp-hero__stat{padding:1.5rem 0}
+  .vhp-hero__stat dt{font-size:.875rem;color:var(--vh-ink-muted)}
+  .vhp-hero__stat dd{margin-top:.25rem!important;font-size:1.25rem;font-weight:800}
+  @media (min-width:640px){.vhp-hero h1{font-size:3rem}.vhp-hero__stat dd{font-size:1.5rem}}
+  @media (min-width:1024px){
+    .vhp-hero__grid{grid-template-columns:1.1fr .9fr;padding-top:6rem;padding-bottom:6rem}
+    .vhp-hero h1{font-size:3.75rem}
+    .vhp-hero__stats .vhp__wrap{grid-template-columns:repeat(4,1fr)}
+    .vhp-hero__stat{padding:1.5rem}
+    .vhp-hero__stat:first-child{padding-left:0}
+  }
+</style>
+<section id="top" class="vhp vhp--ink vhp-hero">
+  <div class="vhp__wrap vhp-hero__grid">
+    <div>
+      <p class="vhp-hero__badge">Core offering · Rental</p>
+      <h1>Rent AI servers and run your own AI services</h1>
+      <p class="vhp-hero__lead">High-performance GPU infrastructure for business: rent by the hour, by the month or as a dedicated cluster, with a team that helps you build chatbots, RAG, computer vision and inference APIs.</p>
+      <div class="vhp-hero__actions">
+        <a class="vhp-btn vhp-btn--light" href="#tu-van">Get a consultation <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+        <a class="vhp-btn vhp-btn--ghost" href="tel:1900232303"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/></svg> 1900 232303</a>
+      </div>
+    </div>
+    <div class="vhp-hero__art">
+      <img src="https://vuhai.co/wp-content/uploads/2026/11/vuhai-ai.png" alt="Vu Hai AI services illustration: GPU servers, AI chatbot, AI cameras and smart traffic" loading="eager" onerror="this.style.display='none'">
+    </div>
+  </div>
+  <dl class="vhp-hero__stats">
+    <div class="vhp__wrap">
+      <div class="vhp-hero__stat"><dt>GPU interconnect</dt><dd>NVLink 900 GB/s</dd></div>
+      <div class="vhp-hero__stat"><dt>HBM3e bandwidth</dt><dd>3.35 TB/s</dd></div>
+      <div class="vhp-hero__stat"><dt>Cluster network</dt><dd>InfiniBand 400/800G</dd></div>
+      <div class="vhp-hero__stat"><dt>Operations support</dt><dd>24/7/365</dd></div>
+    </div>
+  </dl>
+</section>
+
+<!-- ----- 02. Vì sao thuê AI Server ----- -->
+<section class="vhp">
+  <div class="vhp__wrap">
+    <div class="vhp-head">
+      <p class="vhp-eyebrow">Why rent an AI server</p>
+      <h2 class="vhp-title">GPU power without the capital cost</h2>
+      <p class="vhp-desc">You focus on your AI services and data; Vu Hai takes care of the infrastructure, setup and operations.</p>
+    </div>
+    <div class="vhp-grid vhp-grid--4">
+      <div class="vhp-card vhp-card--line vhp-card--sm">
+        <span class="vhp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15.914 4a1.5 1.5 0 00-2.474-1.561l-9 9A1.5 1.5 0 005.5 14h4.002a.5.5 0 01.471.666L8.086 20a1.5 1.5 0 002.475 1.56l9-9A1.5 1.5 0 0018.5 10h-3.997a.5.5 0 01-.472-.667z"/></svg></span>
+        <h3>No large upfront investment</h3>
+        <p>Rent GPU servers instead of buying: turn capital expense into operating expense that tracks real demand.</p>
+      </div>
+      <div class="vhp-card vhp-card--line vhp-card--sm">
+        <span class="vhp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="8" x="2" y="2" rx="2" ry="2"/><rect width="20" height="8" x="2" y="14" rx="2" ry="2"/><line x1="6" x2="6.01" y1="6" y2="6"/><line x1="6" x2="6.01" y1="18" y2="18"/></svg></span>
+        <h3>Ready to run</h3>
+        <p>Servers come with drivers, CUDA, containers and environments pre-installed, handed over by the Vu Hai team against a checklist.</p>
+      </div>
+      <div class="vhp-card vhp-card--line vhp-card--sm">
+        <span class="vhp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></span>
+        <h3>Your data stays yours</h3>
+        <p>Dedicated servers with network isolation; the Private AI option never sends data outside.</p>
+      </div>
+      <div class="vhp-card vhp-card--line vhp-card--sm">
+        <span class="vhp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"/><path d="M20 2v4"/><path d="M22 4h-4"/><circle cx="4" cy="20" r="2"/></svg></span>
+        <h3>Deploy with experts</h3>
+        <p>More than hardware: we help you build chatbots, RAG and inference, and integrate them with your existing systems.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ----- 03. Mô hình cho thuê ----- -->
+<section id="mo-hinh-thue" class="vhp vhp--alt">
+  <div class="vhp__wrap">
+    <div class="vhp-head">
+      <p class="vhp-eyebrow">Rental options</p>
+      <h2 class="vhp-title">Choose the rental model that fits your project stage</h2>
+      <p class="vhp-desc">Pricing depends on GPU configuration and term — contact us for a quote.</p>
+    </div>
+    <div class="vhp-grid vhp-grid--4md">
+      <div class="vhp-card">
+        <div class="vhp-between"><span class="vhp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="8" x="2" y="2" rx="2" ry="2"/><rect width="20" height="8" x="2" y="14" rx="2" ry="2"/><line x1="6" x2="6.01" y1="6" y2="6"/><line x1="6" x2="6.01" y1="18" y2="18"/></svg></span><span class="vhp-tag">Most popular</span></div>
+        <h3>Dedicated GPU Server</h3>
+        <p>A standalone bare-metal GPU server with full control, ideal for stable, long-running AI services.</p>
+        <ul class="vhp-checks"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Monthly / quarterly / yearly terms</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Isolated resources, consistent performance</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Full root access and software customization</li></ul>
+        <a class="vhp-more" href="#tu-van">Request a quote →</a>
+      </div>
+      <div class="vhp-card">
+        <div class="vhp-between"><span class="vhp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg></span><span class="vhp-tag">Flexible</span></div>
+        <h3>Hourly GPU</h3>
+        <p>Fast provisioning for experiments, short training runs or load spikes.</p>
+        <ul class="vhp-checks"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Pay for the time you use</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Scale up and down quickly</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Great for POCs and short fine-tuning</li></ul>
+        <a class="vhp-more" href="#tu-van">Request a quote →</a>
+      </div>
+      <div class="vhp-card">
+        <div class="vhp-between"><span class="vhp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 13h4"/><path d="M12 18h6a2 2 0 012 2v1"/><path d="M12 8h8"/><path d="M12 9a4.17 4.17 0 01-3 4"/><path d="M16 8V5a2 2 0 012-2"/><path d="M6 18a4 4 0 01-2-7.465"/><path d="M6.004 5.125a4 4 0 00-2.526 5.77"/><path d="M6.294 6.294A3 3 0 1112 5v13a4 4 0 11-7.967-.518"/><circle cx="16" cy="13" r="0.5" fill="currentColor"/><circle cx="18" cy="3" r="0.5" fill="currentColor"/><circle cx="20" cy="21" r="0.5" fill="currentColor"/><circle cx="20" cy="8" r="0.5" fill="currentColor"/></svg></span><span class="vhp-tag">Large scale</span></div>
+        <h3>GPU Cluster</h3>
+        <p>Multiple nodes on non-blocking InfiniBand for large-model training and HPC.</p>
+        <ul class="vhp-checks"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>8 GPUs/node, NVLink domain</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>High-throughput parallel storage</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Designed to your project</li></ul>
+        <a class="vhp-more" href="#tu-van">Request a quote →</a>
+      </div>
+      <div class="vhp-card">
+        <div class="vhp-between"><span class="vhp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></span><span class="vhp-tag">High security</span></div>
+        <h3>Private AI on-premise</h3>
+        <p>Air-gapped AI infrastructure for organizations whose data must never leave their systems.</p>
+        <ul class="vhp-checks"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>No external telemetry exposure</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Suited to finance, healthcare and government</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Custom assessment and design</li></ul>
+        <a class="vhp-more" href="#tu-van">Request a quote →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ----- 04. Thông số hạ tầng GPU ----- -->
+<style>
+  .vhp-spec{display:grid;gap:2.5rem}
+  .vhp-spec dl{overflow:hidden;border:1px solid var(--vh-border);border-radius:1rem}
+  .vhp-spec__row{display:grid;gap:.25rem;padding:1rem 1.25rem;background:#fff}
+  .vhp-spec__row:nth-child(even){background:var(--vh-secondary)}
+  .vhp-spec dt{font-weight:700;color:var(--vh-navy)}
+  .vhp-spec dd{color:rgba(32,39,48,.9)}
+  @media (min-width:640px){.vhp-spec__row{grid-template-columns:11rem 1fr;gap:1.5rem}}
+  @media (min-width:1024px){.vhp-spec{grid-template-columns:.8fr 1.2fr}}
+</style>
+<section id="cau-hinh" class="vhp">
+  <div class="vhp__wrap vhp-spec">
+    <div class="vhp-head">
+      <p class="vhp-eyebrow">Reference configuration</p>
+      <h2 class="vhp-title">GPU infrastructure specifications</h2>
+      <p class="vhp-desc">Reference configuration for training and inference clusters. GPU models and availability are confirmed for each rental request.</p>
+    </div>
+    <dl>
+      <div class="vhp-spec__row"><dt>GPU</dt><dd>NVIDIA HGX (8 GPUs/node), GB200 NVL72 for large clusters</dd></div>
+      <div class="vhp-spec__row"><dt>GPU interconnect</dt><dd>NVLink 900 GB/s</dd></div>
+      <div class="vhp-spec__row"><dt>GPU memory</dt><dd>HBM3e, 3.35 TB/s bandwidth</dd></div>
+      <div class="vhp-spec__row"><dt>Cluster network</dt><dd>InfiniBand Quantum-2, fat-tree non-blocking, 400/800 Gbps</dd></div>
+      <div class="vhp-spec__row"><dt>Inter-node latency</dt><dd>&lt; 1.2 µs</dd></div>
+      <div class="vhp-spec__row"><dt>Storage</dt><dd>Parallel storage (Weka / Lustre), &gt; 2.4 TB/s</dd></div>
+      <div class="vhp-spec__row"><dt>Cooling</dt><dd>Direct-to-chip liquid cooling, up to 120 kW/rack</dd></div>
+      <div class="vhp-spec__row"><dt>OS &amp; software</dt><dd>Ubuntu, CUDA, Docker, Kubernetes on request</dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- ----- 05. Dịch vụ AI triển khai được ----- -->
+<section id="dich-vu-ai" class="vhp vhp--alt">
+  <div class="vhp__wrap">
+    <div class="vhp-head">
+      <p class="vhp-eyebrow">AI services you can deploy</p>
+      <h2 class="vhp-title">From internal chatbots to training your own models</h2>
+      <p class="vhp-desc">Vu Hai helps you put models into production and integrate them with systems such as VAN-Logistic or your ERP.</p>
+    </div>
+    <div class="vhp-grid vhp-grid--2">
+      <div class="vhp-card vhp-card--row">
+        <span class="vhp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 10a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 14.286V4a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/><path d="M20 9a2 2 0 0 1 2 2v10.286a.71.71 0 0 1-1.212.502l-2.202-2.202A2 2 0 0 0 17.172 19H10a2 2 0 0 1-2-2v-1"/></svg></span>
+        <div>
+          <h3>Chatbots &amp; internal assistants</h3>
+          <p>Run your own LLM with RAG over company documents: answer questions on processes, contracts and operations.</p>
+          <ul class="vhp-checks"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Open-source LLMs or your own models</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Connects to document stores, ERP, CRM</li></ul>
+        </div>
+      </div>
+      <div class="vhp-card vhp-card--row">
+        <span class="vhp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"/><circle cx="12" cy="12" r="3"/></svg></span>
+        <div>
+          <h3>Computer vision</h3>
+          <p>Recognition, quality inspection and document OCR at low latency.</p>
+          <ul class="vhp-checks"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>OCR for files, invoices, C/O</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Real-time product defect detection</li></ul>
+        </div>
+      </div>
+      <div class="vhp-card vhp-card--row">
+        <span class="vhp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 5H3"/><path d="M12 19H3"/><path d="M14 3v4"/><path d="M16 17v4"/><path d="M21 12h-9"/><path d="M21 19h-5"/><path d="M21 5h-7"/><path d="M8 10v4"/><path d="M8 12H3"/></svg></span>
+        <div>
+          <h3>Training &amp; fine-tuning</h3>
+          <p>Fine-tune models on your own data, renting GPUs by the hour or as a dedicated cluster.</p>
+          <ul class="vhp-checks"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Fine-tune LLMs and recognition models</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Checkpoints on high-throughput storage</li></ul>
+        </div>
+      </div>
+      <div class="vhp-card vhp-card--row">
+        <span class="vhp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg></span>
+        <div>
+          <h3>AI Inference API</h3>
+          <p>Serve models as a reliable API for your applications and customers.</p>
+          <ul class="vhp-checks"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Autoscaling with load</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Monitoring, logging and access control</li></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ----- 06. Quy trình triển khai ----- -->
+<style>
+  .vhp-steps{margin-top:3rem;display:grid;gap:1.5rem}
+  .vhp-steps li{border:1px solid var(--vh-border);border-radius:1rem;background:#fff;padding:1.5rem}
+  .vhp-steps__num{font-size:1.875rem;font-weight:800;color:var(--vh-primary)}
+  .vhp-steps h3{margin-top:.75rem!important;font-size:1.125rem;font-weight:800;color:var(--vh-navy)}
+  .vhp-steps p{margin-top:.5rem!important;font-size:.875rem;line-height:1.65;color:var(--vh-muted)}
+  @media (min-width:768px){.vhp-steps{grid-template-columns:repeat(5,1fr)}}
+</style>
+<section class="vhp">
+  <div class="vhp__wrap">
+    <div class="vhp-head">
+      <p class="vhp-eyebrow">How it works</p>
+      <h2 class="vhp-title">From idea to a live AI service in five steps</h2>
+    </div>
+    <ol class="vhp-steps">
+      <li><span class="vhp-steps__num">01</span><h3>Discovery</h3><p>We discuss your AI goals, data, user scale and security requirements.</p></li>
+      <li><span class="vhp-steps__num">02</span><h3>Configuration</h3><p>We propose GPU type, node count, storage and rental term.</p></li>
+      <li><span class="vhp-steps__num">03</span><h3>Provisioning &amp; setup</h3><p>We set up CUDA, containers and Kubernetes, and benchmark performance before handover.</p></li>
+      <li><span class="vhp-steps__num">04</span><h3>AI service deployment</h3><p>Models, RAG or APIs go live and are integrated with your existing systems.</p></li>
+      <li><span class="vhp-steps__num">05</span><h3>Operations &amp; optimization</h3><p>24/7 monitoring, technical support and resource adjustments as your needs change.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ----- 07. Câu hỏi thường gặp ----- -->
+<style>
+  .vhp-faq{max-width:48rem;margin:2.5rem auto 0;display:grid;gap:.75rem}
+  .vhp-faq details{border:1px solid var(--vh-border);border-radius:.75rem;background:#fff;padding:.25rem 1.5rem;margin:0}
+  .vhp-faq summary{display:flex;align-items:center;gap:1rem;padding:1rem 0;cursor:pointer;list-style:none;font-weight:700;color:var(--vh-navy)}
+  .vhp-faq summary::-webkit-details-marker{display:none}
+  .vhp-faq summary::marker{content:""}
+  .vhp-faq__num{font-size:.875rem;color:var(--vh-primary)}
+  .vhp-faq__q{flex:1}
+  .vhp-faq summary svg{width:1.25rem;height:1.25rem;flex-shrink:0;transition:transform .2s}
+  .vhp-faq details[open] summary svg{transform:rotate(180deg)}
+  .vhp-faq__a{padding:0 0 1.25rem 2.25rem!important;line-height:1.65;color:var(--vh-muted)}
+</style>
+<section class="vhp vhp--alt">
+  <div class="vhp__wrap">
+    <div class="vhp-head vhp-head--center">
+      <p class="vhp-eyebrow">Frequently asked questions</p>
+      <h2 class="vhp-title">AI Services questions</h2>
+    </div>
+    <div class="vhp-faq">
+      <details open>
+        <summary><span class="vhp-faq__num">01</span><span class="vhp-faq__q">How is renting an AI server different from regular cloud?</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <p class="vhp-faq__a">You get a dedicated GPU server with a clear configuration, unshared resources and a team that helps you deploy your AI services — not just a virtual machine.</p>
+      </details>
+      <details>
+        <summary><span class="vhp-faq__num">02</span><span class="vhp-faq__q">Is our data kept secure?</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <p class="vhp-faq__a">Dedicated servers are isolated; for stricter requirements, our Private AI (air-gapped) option keeps data inside your own systems. Details are agreed during the assessment.</p>
+      </details>
+      <details>
+        <summary><span class="vhp-faq__num">03</span><span class="vhp-faq__q">What is the minimum term and cost?</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <p class="vhp-faq__a">It depends on the model (hourly, monthly or dedicated cluster) and GPU type. Vu Hai quotes based on your actual configuration and term — leave your details for a consultation.</p>
+      </details>
+      <details>
+        <summary><span class="vhp-faq__num">04</span><span class="vhp-faq__q">Does Vu Hai help deploy AI models?</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <p class="vhp-faq__a">Yes. Our team sets up environments, builds chatbots/RAG and inference APIs, and integrates them with systems such as VAN-Logistic or ERP.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ----- 08. Tư vấn & liên hệ ----- -->
+<style>
+  .vhp-consult{display:grid;gap:2.5rem}
+  .vhp-consult h2{font-size:1.875rem;line-height:1.25;font-weight:800;color:var(--vh-navy)}
+  .vhp-consult__lead{margin-top:.75rem!important;font-size:1.125rem;line-height:1.6;color:var(--vh-muted)}
+  .vhp-consult__card{border-radius:1rem;background:#fff;padding:1.5rem;box-shadow:0 1px 3px rgba(0,0,0,.06)}
+  .vhp-consult form{margin-top:2rem;display:grid;gap:1.25rem}
+  .vhp-consult label{display:block;font-size:.875rem;font-weight:700;color:var(--vh-fg)}
+  .vhp-consult input,.vhp-consult textarea{display:block;width:100%;margin-top:.375rem;border:1px solid var(--vh-border);border-radius:.5rem;background:#fff;padding:.625rem 1rem;font:inherit;font-size:1rem;font-weight:400;color:var(--vh-fg);outline:none;box-shadow:none}
+  .vhp-consult input:focus,.vhp-consult textarea:focus{border-color:var(--vh-primary);box-shadow:0 0 0 3px rgba(14,106,206,.25)}
+  .vhp-consult__submit{display:inline-flex;align-items:center;height:3rem;padding:0 2rem;border:0;border-radius:.75rem;background:var(--vh-primary);color:#fff;font:inherit;font-size:1rem;font-weight:700;cursor:pointer}
+  .vhp-consult__submit:hover{background:#0b5cb4}
+  .vhp-consult__status{display:none;margin-top:.75rem!important;align-items:center;gap:.5rem;font-size:.875rem;font-weight:600;color:var(--vh-primary)}
+  .vhp-consult__status.is-shown{display:flex}
+  .vhp-consult__status svg{width:1rem;height:1rem}
+  .vhp-consult__list{margin-top:2rem!important;display:grid;gap:1rem}
+  .vhp-consult__list li{display:flex;align-items:center;gap:1rem;border-radius:.75rem;background:#fff;padding:1.25rem;box-shadow:0 1px 3px rgba(0,0,0,.06)}
+  .vhp-consult__label{display:block;font-size:.875rem;color:var(--vh-muted)}
+  .vhp-consult__value{font-size:1.25rem;font-weight:800;color:var(--vh-navy)!important}
+  a.vhp-consult__value:hover{color:var(--vh-primary)!important}
+  @media (min-width:640px){.vhp-consult__card{padding:2.5rem}.vhp-consult form{grid-template-columns:1fr 1fr}.vhp-consult__full{grid-column:span 2}}
+  @media (min-width:1024px){.vhp-consult{grid-template-columns:1.1fr .9fr}}
+</style>
+<section id="tu-van" class="vhp vhp--alt" data-topic="AI Services" data-email="support@vuhai.co">
+  <div class="vhp__wrap vhp-consult">
+    <div class="vhp-consult__card">
+      <h2>Get AI Services advice and a quote</h2>
+      <p class="vhp-consult__lead">Tell us your AI goals, data size and timeline; Vu Hai will propose the right configuration and rental plan.</p>
+      <!-- Form gửi qua ứng dụng email của khách (mailto). Có thể thay cả <form> bằng shortcode Contact Form 7 / WPForms. -->
+      <form>
+        <label>Full name<input name="name" required autocomplete="name"></label>
+        <label>Phone<input name="phone" type="tel" required autocomplete="tel"></label>
+        <label class="vhp-consult__full">How can we help?<textarea name="message" rows="4"></textarea></label>
+        <div class="vhp-consult__full">
+          <button type="submit" class="vhp-consult__submit">Request a consultation</button>
+          <p class="vhp-consult__status" role="status"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m16 9-5.5 5.5L8 12"/></svg>Your email app has been opened to send the request to support@vuhai.co.</p>
+        </div>
+      </form>
+    </div>
+    <div id="lien-he">
+      <h2>Contact us directly</h2>
+      <p class="vhp-consult__lead">Reach the Vu Hai team through the channel that suits you.</p>
+      <ul class="vhp-consult__list">
+        <li><span class="vhp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/></svg></span><span><span class="vhp-consult__label">Sales hotline</span><a class="vhp-consult__value" href="tel:1900232303">1900 232303</a></span></li>
+        <li><span class="vhp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg></span><span><span class="vhp-consult__label">Support email</span><a class="vhp-consult__value" href="mailto:support@vuhai.co">support@vuhai.co</a></span></li>
+        <li><span class="vhp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span><span><span class="vhp-consult__label">Support hours</span><span class="vhp-consult__value">Monday – Friday, 08:00–17:30 (GMT+7)</span></span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+<script>
+(function () {
+  document.querySelectorAll("#tu-van[data-topic]").forEach(function (root) {
+    var form = root.querySelector("form");
+    if (!form || form.dataset.vhBound) return;
+    form.dataset.vhBound = "1";
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var d = new FormData(form);
+      var body = ["Name: " + (d.get("name") || ""), "Phone: " + (d.get("phone") || ""), "", d.get("message") || ""].join("\n");
+      var subject = "[" + root.getAttribute("data-topic") + "] Consultation request";
+      window.location.href = "mailto:" + root.getAttribute("data-email") + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+      root.querySelector(".vhp-consult__status").classList.add("is-shown");
+    });
+  });
+})();
+</script>
+
+<!-- ===== /Toàn trang Dịch vụ AI ===== -->

@@ -1,0 +1,94 @@
+<!-- ===== Vũ Hải — 05. Tư vấn & liên hệ. Dán vào block "HTML tùy chỉnh" ===== -->
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800&display=swap&subset=vietnamese" rel="stylesheet">
+
+<style>
+  .vh-consult{--vh-primary:#0e6ace;--vh-navy:#004188;--vh-secondary:#f0f5fa;--vh-fg:#202730;--vh-muted:#5a6472;--vh-border:#dbe2e9;
+    position:relative;width:100vw;margin-left:calc(50% - 50vw);padding:5rem 0;background:var(--vh-secondary);font-family:"Nunito Sans",system-ui,sans-serif;color:var(--vh-fg);box-sizing:border-box;scroll-margin-top:6rem}
+  .vh-consult *,.vh-consult *::before,.vh-consult *::after{box-sizing:border-box}
+  .vh-consult h2,.vh-consult p,.vh-consult ul{margin:0;padding:0}
+  .vh-consult a{text-decoration:none}
+  .vh-consult__wrap{max-width:80rem;margin:0 auto;padding:0 1rem;display:grid;gap:2.5rem}
+  .vh-consult__card{border-radius:1rem;background:#fff;padding:1.5rem;box-shadow:0 1px 3px rgba(0,0,0,.06)}
+  .vh-consult h2{font-size:1.875rem;line-height:1.25;font-weight:800;color:var(--vh-navy)}
+  .vh-consult__lead{margin-top:.75rem!important;font-size:1.125rem;line-height:1.6;color:var(--vh-muted)}
+  .vh-consult__form{margin-top:2rem;display:grid;gap:1.25rem}
+  .vh-consult__form label{display:block;font-size:.875rem;font-weight:700;color:var(--vh-fg)}
+  .vh-consult__form input,.vh-consult__form textarea{display:block;width:100%;margin-top:.375rem;border:1px solid var(--vh-border);border-radius:.5rem;background:#fff;padding:.625rem 1rem;font:inherit;font-size:1rem;font-weight:400;color:var(--vh-fg);outline:none;box-shadow:none}
+  .vh-consult__form input:focus,.vh-consult__form textarea:focus{border-color:var(--vh-primary);box-shadow:0 0 0 3px rgba(14,106,206,.25)}
+  .vh-consult__submit{display:inline-flex;align-items:center;justify-content:center;height:3rem;padding:0 2rem;border:0;border-radius:.75rem;background:var(--vh-primary);color:#fff;font:inherit;font-size:1rem;font-weight:700;cursor:pointer;transition:background .2s}
+  .vh-consult__submit:hover{background:#0b5cb4}
+  .vh-consult__status{display:none;margin-top:.75rem!important;align-items:center;gap:.5rem;font-size:.875rem;font-weight:600;color:var(--vh-primary)}
+  .vh-consult__status.is-shown{display:flex}
+  .vh-consult__status svg{width:1rem;height:1rem}
+  .vh-consult__list{list-style:none;margin-top:2rem!important;display:grid;gap:1rem}
+  .vh-consult__list li{display:flex;align-items:center;gap:1rem;border-radius:.75rem;background:#fff;padding:1.25rem;box-shadow:0 1px 3px rgba(0,0,0,.06)}
+  .vh-consult__icon{display:grid;place-items:center;flex-shrink:0;width:3rem;height:3rem;border-radius:.75rem;background:var(--vh-secondary);color:var(--vh-primary)}
+  .vh-consult__icon svg{width:1.5rem;height:1.5rem}
+  .vh-consult__label{display:block;font-size:.875rem;color:var(--vh-muted)}
+  .vh-consult__value{font-size:1.25rem;font-weight:800;color:var(--vh-navy)!important}
+  a.vh-consult__value:hover{color:var(--vh-primary)!important}
+  @media (min-width:640px){
+    .vh-consult__wrap{padding:0 1.5rem}
+    .vh-consult__card{padding:2.5rem}
+    .vh-consult__form{grid-template-columns:1fr 1fr}
+    .vh-consult__full{grid-column:span 2}
+  }
+  @media (min-width:1024px){.vh-consult__wrap{padding:0 2rem;grid-template-columns:1.1fr .9fr}}
+</style>
+
+<section id="tu-van" class="vh-consult" data-topic="Vũ Hải" data-email="support@vuhai.co">
+  <div class="vh-consult__wrap">
+    <div class="vh-consult__card">
+      <h2>Cần tư vấn dịch vụ AI hoặc Data center?</h2>
+      <p class="vh-consult__lead">Để lại thông tin để đội ngũ Vũ Hải đề xuất cấu hình và phương án phù hợp với nhu cầu thực tế.</p>
+
+      <!-- Form gửi qua ứng dụng email của khách (mailto). Có thể thay cả <form> bằng shortcode Contact Form 7 / WPForms. -->
+      <form class="vh-consult__form">
+        <label>Họ tên<input name="name" required autocomplete="name"></label>
+        <label>Điện thoại<input name="phone" type="tel" required autocomplete="tel"></label>
+        <label class="vh-consult__full">Nội dung hỗ trợ<textarea name="message" rows="4"></textarea></label>
+        <div class="vh-consult__full">
+          <button type="submit" class="vh-consult__submit">Gửi yêu cầu tư vấn</button>
+          <p class="vh-consult__status" role="status"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>Đã mở ứng dụng thư để gửi yêu cầu tới support@vuhai.co.</p>
+        </div>
+      </form>
+    </div>
+
+    <div id="lien-he">
+      <h2>Liên hệ trực tiếp</h2>
+      <p class="vh-consult__lead">Kết nối với đội ngũ Vũ Hải qua kênh phù hợp với bạn.</p>
+      <ul class="vh-consult__list">
+        <li>
+          <span class="vh-consult__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/></svg></span>
+          <span><span class="vh-consult__label">Hotline tư vấn</span><a class="vh-consult__value" href="tel:1900232303">1900 232303</a></span>
+        </li>
+        <li>
+          <span class="vh-consult__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg></span>
+          <span><span class="vh-consult__label">Email hỗ trợ</span><a class="vh-consult__value" href="mailto:support@vuhai.co">support@vuhai.co</a></span>
+        </li>
+        <li>
+          <span class="vh-consult__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span>
+          <span><span class="vh-consult__label">Thời gian hỗ trợ</span><span class="vh-consult__value">Thứ Hai – Thứ Sáu, 08:00–17:30</span></span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<script>
+(function () {
+  document.querySelectorAll(".vh-consult").forEach(function (root) {
+    var form = root.querySelector(".vh-consult__form");
+    if (!form) return;
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var d = new FormData(form);
+      var body = ["Họ tên: " + (d.get("name") || ""), "Điện thoại: " + (d.get("phone") || ""), "", d.get("message") || ""].join("\n");
+      var subject = "[" + root.getAttribute("data-topic") + "] Yêu cầu tư vấn";
+      window.location.href = "mailto:" + root.getAttribute("data-email") + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+      root.querySelector(".vh-consult__status").classList.add("is-shown");
+    });
+  });
+})();
+</script>
+<!-- ===== /05. Tư vấn & liên hệ ===== -->

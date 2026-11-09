@@ -1,0 +1,86 @@
+<!-- ===== Vũ Hải — 05. Dịch vụ AI — Dịch vụ AI triển khai được. Dán vào block "HTML tùy chỉnh" ===== -->
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800&display=swap&subset=vietnamese" rel="stylesheet">
+<style>
+  .vhp{--vh-primary:#0e6ace;--vh-navy:#004188;--vh-secondary:#f0f5fa;--vh-fg:#202730;--vh-muted:#5a6472;--vh-border:#dbe2e9;--vh-ink:#062b5f;--vh-ink-raised:#123b75;--vh-ink-muted:#c0d0e4;--vh-ink-border:rgba(255,255,255,.16);
+    position:relative;width:100vw;margin-left:calc(50% - 50vw);padding:5rem 0;background:#fff;font-family:"Nunito Sans",system-ui,sans-serif;color:var(--vh-fg);box-sizing:border-box;scroll-margin-top:6rem}
+  .vhp *,.vhp *::before,.vhp *::after{box-sizing:border-box}
+  .vhp h1,.vhp h2,.vhp h3,.vhp p,.vhp ul,.vhp ol,.vhp dl,.vhp dt,.vhp dd{margin:0;padding:0}
+  .vhp ul,.vhp ol{list-style:none}
+  .vhp a{text-decoration:none}
+  .vhp svg{display:block}
+  .vhp--alt{background:var(--vh-secondary)}
+  .vhp--ink{background:var(--vh-ink);color:#fff}
+  .vhp__wrap{max-width:80rem;margin:0 auto;padding:0 1rem}
+  .vhp-head{max-width:48rem}
+  .vhp-head--center{margin:0 auto;text-align:center}
+  .vhp-eyebrow{font-size:.875rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--vh-primary)}
+  .vhp-title{margin-top:.5rem!important;font-size:1.875rem;line-height:1.25;font-weight:800;color:var(--vh-navy);text-wrap:balance}
+  .vhp-desc{margin-top:1rem!important;font-size:1.125rem;line-height:1.65;color:var(--vh-muted)}
+  .vhp--ink .vhp-eyebrow,.vhp--ink .vhp-desc{color:var(--vh-ink-muted)}
+  .vhp--ink .vhp-title{color:#fff}
+  .vhp-grid{margin-top:2.5rem;display:grid;gap:1.25rem}
+  .vhp-card{display:flex;flex-direction:column;border-radius:1rem;background:#fff;padding:1.5rem;box-shadow:0 1px 3px rgba(0,0,0,.06)}
+  .vhp-card--line{border:1px solid var(--vh-border);box-shadow:none}
+  .vhp-card--row{flex-direction:row;gap:1.25rem}
+  .vhp-icon{display:grid;place-items:center;flex-shrink:0;width:3rem;height:3rem;border-radius:.75rem;background:var(--vh-secondary);color:var(--vh-primary)}
+  .vhp-icon svg{width:1.5rem;height:1.5rem}
+  .vhp-card h3{margin-top:1rem!important;font-size:1.25rem;font-weight:800;color:var(--vh-navy)}
+  .vhp-card--row h3{margin-top:0!important}
+  .vhp-card--sm h3{font-size:1.125rem}
+  .vhp-card p{margin-top:.5rem!important;line-height:1.65;color:var(--vh-muted)}
+  .vhp-checks{margin-top:1.25rem!important;display:grid;gap:.625rem;font-size:.875rem;flex:1;align-content:start}
+  .vhp-checks li{display:flex;align-items:flex-start;gap:.5rem}
+  .vhp-checks svg{margin-top:.125rem;width:1rem;height:1rem;flex-shrink:0;color:var(--vh-primary)}
+  .vhp-more{margin-top:1.5rem;font-weight:700;color:var(--vh-primary)!important}
+  .vhp-more:hover{text-decoration:underline}
+  .vhp-tag{border-radius:9999px;background:var(--vh-secondary);padding:.25rem .75rem;font-size:.75rem;font-weight:700;color:var(--vh-primary)}
+  .vhp-between{display:flex;align-items:center;justify-content:space-between}
+  @media (min-width:640px){.vhp__wrap{padding:0 1.5rem}.vhp-title{font-size:2.25rem}.vhp-grid--4{grid-template-columns:repeat(2,1fr)}}
+  @media (min-width:768px){.vhp-grid--4md,.vhp-grid--2{grid-template-columns:repeat(2,1fr)}}
+  @media (min-width:1024px){.vhp__wrap{padding:0 2rem}.vhp-grid--4{grid-template-columns:repeat(4,1fr)}}
+  @media (min-width:1280px){.vhp-grid--4md{grid-template-columns:repeat(4,1fr)}}
+</style>
+<section id="dich-vu-ai" class="vhp vhp--alt">
+  <div class="vhp__wrap">
+    <div class="vhp-head">
+      <p class="vhp-eyebrow">Dịch vụ AI triển khai được</p>
+      <h2 class="vhp-title">Từ chatbot nội bộ đến huấn luyện mô hình riêng</h2>
+      <p class="vhp-desc">Vũ Hải hỗ trợ đưa mô hình vào chạy thật và tích hợp với hệ thống như VAN-Logistic hoặc ERP của doanh nghiệp.</p>
+    </div>
+    <div class="vhp-grid vhp-grid--2">
+      <div class="vhp-card vhp-card--row">
+        <span class="vhp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 10a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 14.286V4a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/><path d="M20 9a2 2 0 0 1 2 2v10.286a.71.71 0 0 1-1.212.502l-2.202-2.202A2 2 0 0 0 17.172 19H10a2 2 0 0 1-2-2v-1"/></svg></span>
+        <div>
+          <h3>Chatbot &amp; Trợ lý nội bộ</h3>
+          <p>Dựng LLM riêng và RAG trên tài liệu doanh nghiệp: hỏi đáp quy trình, hợp đồng, nghiệp vụ.</p>
+          <ul class="vhp-checks"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>LLM mã nguồn mở hoặc mô hình riêng</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Kết nối kho tài liệu, ERP, CRM</li></ul>
+        </div>
+      </div>
+      <div class="vhp-card vhp-card--row">
+        <span class="vhp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"/><circle cx="12" cy="12" r="3"/></svg></span>
+        <div>
+          <h3>Thị giác máy tính</h3>
+          <p>Nhận dạng, kiểm tra chất lượng, OCR chứng từ với độ trễ thấp.</p>
+          <ul class="vhp-checks"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>OCR hồ sơ, hoá đơn, C/O</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Phát hiện lỗi sản phẩm theo thời gian thực</li></ul>
+        </div>
+      </div>
+      <div class="vhp-card vhp-card--row">
+        <span class="vhp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 5H3"/><path d="M12 19H3"/><path d="M14 3v4"/><path d="M16 17v4"/><path d="M21 12h-9"/><path d="M21 19h-5"/><path d="M21 5h-7"/><path d="M8 10v4"/><path d="M8 12H3"/></svg></span>
+        <div>
+          <h3>Huấn luyện &amp; Fine-tuning</h3>
+          <p>Tinh chỉnh mô hình trên dữ liệu của doanh nghiệp, thuê GPU theo giờ hoặc cụm riêng.</p>
+          <ul class="vhp-checks"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Fine-tune LLM, mô hình nhận dạng</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Checkpoint trên lưu trữ thông lượng cao</li></ul>
+        </div>
+      </div>
+      <div class="vhp-card vhp-card--row">
+        <span class="vhp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg></span>
+        <div>
+          <h3>AI Inference API</h3>
+          <p>Chạy mô hình dưới dạng API ổn định cho ứng dụng và khách hàng của bạn.</p>
+          <ul class="vhp-checks"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Autoscale theo tải</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Giám sát, log và phân quyền truy cập</li></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ===== /05. Dịch vụ AI — Dịch vụ AI triển khai được ===== -->

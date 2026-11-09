@@ -1,0 +1,82 @@
+<!-- ===== Vũ Hải [EN] — 02. Data center — Dịch vụ Data center. Dán vào block "HTML tùy chỉnh" ===== -->
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  .vhp{--vh-primary:#0e6ace;--vh-navy:#004188;--vh-secondary:#f0f5fa;--vh-fg:#202730;--vh-muted:#5a6472;--vh-border:#dbe2e9;--vh-ink:#062b5f;--vh-ink-raised:#123b75;--vh-ink-muted:#c0d0e4;--vh-ink-border:rgba(255,255,255,.16);
+    position:relative;width:100vw;margin-left:calc(50% - 50vw);padding:5rem 0;background:#fff;font-family:"Nunito Sans",system-ui,sans-serif;color:var(--vh-fg);box-sizing:border-box;scroll-margin-top:6rem}
+  .vhp *,.vhp *::before,.vhp *::after{box-sizing:border-box}
+  .vhp h1,.vhp h2,.vhp h3,.vhp p,.vhp ul,.vhp ol,.vhp dl,.vhp dt,.vhp dd{margin:0;padding:0}
+  .vhp ul,.vhp ol{list-style:none}
+  .vhp a{text-decoration:none}
+  .vhp svg{display:block}
+  .vhp--alt{background:var(--vh-secondary)}
+  .vhp--ink{background:var(--vh-ink);color:#fff}
+  .vhp__wrap{max-width:80rem;margin:0 auto;padding:0 1rem}
+  .vhp-head{max-width:48rem}
+  .vhp-head--center{margin:0 auto;text-align:center}
+  .vhp-eyebrow{font-size:.875rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--vh-primary)}
+  .vhp-title{margin-top:.5rem!important;font-size:1.875rem;line-height:1.25;font-weight:800;color:var(--vh-navy);text-wrap:balance}
+  .vhp-desc{margin-top:1rem!important;font-size:1.125rem;line-height:1.65;color:var(--vh-muted)}
+  .vhp--ink .vhp-eyebrow,.vhp--ink .vhp-desc{color:var(--vh-ink-muted)}
+  .vhp--ink .vhp-title{color:#fff}
+  .vhp-grid{margin-top:2.5rem;display:grid;gap:1.25rem}
+  .vhp-card{display:flex;flex-direction:column;border-radius:1rem;background:#fff;padding:1.5rem;box-shadow:0 1px 3px rgba(0,0,0,.06)}
+  .vhp-card--line{border:1px solid var(--vh-border);box-shadow:none}
+  .vhp-card--row{flex-direction:row;gap:1.25rem}
+  .vhp-icon{display:grid;place-items:center;flex-shrink:0;width:3rem;height:3rem;border-radius:.75rem;background:var(--vh-secondary);color:var(--vh-primary)}
+  .vhp-icon svg{width:1.5rem;height:1.5rem}
+  .vhp-card h3{margin-top:1rem!important;font-size:1.25rem;font-weight:800;color:var(--vh-navy)}
+  .vhp-card--row h3{margin-top:0!important}
+  .vhp-card--sm h3{font-size:1.125rem}
+  .vhp-card p{margin-top:.5rem!important;line-height:1.65;color:var(--vh-muted)}
+  .vhp-checks{margin-top:1.25rem!important;display:grid;gap:.625rem;font-size:.875rem;flex:1;align-content:start}
+  .vhp-checks li{display:flex;align-items:flex-start;gap:.5rem}
+  .vhp-checks svg{margin-top:.125rem;width:1rem;height:1rem;flex-shrink:0;color:var(--vh-primary)}
+  .vhp-more{margin-top:1.5rem;font-weight:700;color:var(--vh-primary)!important}
+  .vhp-more:hover{text-decoration:underline}
+  .vhp-tag{border-radius:9999px;background:var(--vh-secondary);padding:.25rem .75rem;font-size:.75rem;font-weight:700;color:var(--vh-primary)}
+  .vhp-between{display:flex;align-items:center;justify-content:space-between}
+  @media (min-width:640px){.vhp__wrap{padding:0 1.5rem}.vhp-title{font-size:2.25rem}.vhp-grid--4{grid-template-columns:repeat(2,1fr)}}
+  @media (min-width:768px){.vhp-grid--4md,.vhp-grid--2{grid-template-columns:repeat(2,1fr)}}
+  @media (min-width:1024px){.vhp__wrap{padding:0 2rem}.vhp-grid--4{grid-template-columns:repeat(4,1fr)}}
+  @media (min-width:1280px){.vhp-grid--4md{grid-template-columns:repeat(4,1fr)}}
+</style>
+<section id="dich-vu" class="vhp vhp--alt">
+  <div class="vhp__wrap">
+    <div class="vhp-head">
+      <p class="vhp-eyebrow">Data Center services</p>
+      <h2 class="vhp-title">From rack rental to private cloud and backup</h2>
+      <p class="vhp-desc">Pick the services that match your stage; pricing is based on power draw, number of devices and term.</p>
+    </div>
+    <div class="vhp-grid vhp-grid--4md">
+      <div class="vhp-card">
+        <span class="vhp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="8" x="2" y="2" rx="2" ry="2"/><rect width="20" height="8" x="2" y="14" rx="2" ry="2"/><line x1="6" x2="6.01" y1="6" y2="6"/><line x1="6" x2="6.01" y1="18" y2="18"/></svg></span>
+        <h3>Colocation – rack rental</h3>
+        <p>Host your servers in a purpose-built facility with shared power, cooling and connectivity.</p>
+        <ul class="vhp-checks"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>By the U, half rack or full rack</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Redundant power and network</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Controlled access</li></ul>
+        <a class="vhp-more" href="#tu-van">Request a quote →</a>
+      </div>
+      <div class="vhp-card">
+        <span class="vhp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg></span>
+        <h3>Private cloud</h3>
+        <p>Dedicated virtualized infrastructure on dedicated hardware, isolated from other customers.</p>
+        <ul class="vhp-checks"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>VMs and storage on demand</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Network isolation, access control</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Scale in stages</li></ul>
+        <a class="vhp-more" href="#tu-van">Request a quote →</a>
+      </div>
+      <div class="vhp-card">
+        <span class="vhp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 12a9 3 0 0 0 5 2.69"/><path d="M21 9.3V5"/><path d="M3 5v14a9 3 0 0 0 6.47 2.88"/><path d="M12 12v4h4"/><path d="M13 20a5 5 0 0 0 9-3 4.5 4.5 0 0 0-4.5-4.5c-1.33 0-2.54.54-3.41 1.41L12 16"/></svg></span>
+        <h3>Backup &amp; disaster recovery</h3>
+        <p>Scheduled backups and a recovery plan for incidents, tested against agreed scenarios.</p>
+        <ul class="vhp-checks"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Backups to your RPO/RTO policy</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Replication to a second site</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Regular recovery drills</li></ul>
+        <a class="vhp-more" href="#tu-van">Request a quote →</a>
+      </div>
+      <div class="vhp-card">
+        <span class="vhp-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="16" y="16" width="6" height="6" rx="1"/><rect x="2" y="16" width="6" height="6" rx="1"/><rect x="9" y="2" width="6" height="6" rx="1"/><path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3"/><path d="M12 12V8"/></svg></span>
+        <h3>Connectivity</h3>
+        <p>Internet transit and private links for your systems, with bandwidth that scales with real load.</p>
+        <ul class="vhp-checks"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Multi-homed Internet</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Private site-to-site links</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Bandwidth monitoring and alerts</li></ul>
+        <a class="vhp-more" href="#tu-van">Request a quote →</a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ===== /02. Data center — Dịch vụ Data center ===== -->

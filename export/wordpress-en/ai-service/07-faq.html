@@ -1,0 +1,81 @@
+<!-- ===== Vũ Hải [EN] — 07. Dịch vụ AI — Câu hỏi thường gặp. Dán vào block "HTML tùy chỉnh" ===== -->
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  .vhp{--vh-primary:#0e6ace;--vh-navy:#004188;--vh-secondary:#f0f5fa;--vh-fg:#202730;--vh-muted:#5a6472;--vh-border:#dbe2e9;--vh-ink:#062b5f;--vh-ink-raised:#123b75;--vh-ink-muted:#c0d0e4;--vh-ink-border:rgba(255,255,255,.16);
+    position:relative;width:100vw;margin-left:calc(50% - 50vw);padding:5rem 0;background:#fff;font-family:"Nunito Sans",system-ui,sans-serif;color:var(--vh-fg);box-sizing:border-box;scroll-margin-top:6rem}
+  .vhp *,.vhp *::before,.vhp *::after{box-sizing:border-box}
+  .vhp h1,.vhp h2,.vhp h3,.vhp p,.vhp ul,.vhp ol,.vhp dl,.vhp dt,.vhp dd{margin:0;padding:0}
+  .vhp ul,.vhp ol{list-style:none}
+  .vhp a{text-decoration:none}
+  .vhp svg{display:block}
+  .vhp--alt{background:var(--vh-secondary)}
+  .vhp--ink{background:var(--vh-ink);color:#fff}
+  .vhp__wrap{max-width:80rem;margin:0 auto;padding:0 1rem}
+  .vhp-head{max-width:48rem}
+  .vhp-head--center{margin:0 auto;text-align:center}
+  .vhp-eyebrow{font-size:.875rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--vh-primary)}
+  .vhp-title{margin-top:.5rem!important;font-size:1.875rem;line-height:1.25;font-weight:800;color:var(--vh-navy);text-wrap:balance}
+  .vhp-desc{margin-top:1rem!important;font-size:1.125rem;line-height:1.65;color:var(--vh-muted)}
+  .vhp--ink .vhp-eyebrow,.vhp--ink .vhp-desc{color:var(--vh-ink-muted)}
+  .vhp--ink .vhp-title{color:#fff}
+  .vhp-grid{margin-top:2.5rem;display:grid;gap:1.25rem}
+  .vhp-card{display:flex;flex-direction:column;border-radius:1rem;background:#fff;padding:1.5rem;box-shadow:0 1px 3px rgba(0,0,0,.06)}
+  .vhp-card--line{border:1px solid var(--vh-border);box-shadow:none}
+  .vhp-card--row{flex-direction:row;gap:1.25rem}
+  .vhp-icon{display:grid;place-items:center;flex-shrink:0;width:3rem;height:3rem;border-radius:.75rem;background:var(--vh-secondary);color:var(--vh-primary)}
+  .vhp-icon svg{width:1.5rem;height:1.5rem}
+  .vhp-card h3{margin-top:1rem!important;font-size:1.25rem;font-weight:800;color:var(--vh-navy)}
+  .vhp-card--row h3{margin-top:0!important}
+  .vhp-card--sm h3{font-size:1.125rem}
+  .vhp-card p{margin-top:.5rem!important;line-height:1.65;color:var(--vh-muted)}
+  .vhp-checks{margin-top:1.25rem!important;display:grid;gap:.625rem;font-size:.875rem;flex:1;align-content:start}
+  .vhp-checks li{display:flex;align-items:flex-start;gap:.5rem}
+  .vhp-checks svg{margin-top:.125rem;width:1rem;height:1rem;flex-shrink:0;color:var(--vh-primary)}
+  .vhp-more{margin-top:1.5rem;font-weight:700;color:var(--vh-primary)!important}
+  .vhp-more:hover{text-decoration:underline}
+  .vhp-tag{border-radius:9999px;background:var(--vh-secondary);padding:.25rem .75rem;font-size:.75rem;font-weight:700;color:var(--vh-primary)}
+  .vhp-between{display:flex;align-items:center;justify-content:space-between}
+  @media (min-width:640px){.vhp__wrap{padding:0 1.5rem}.vhp-title{font-size:2.25rem}.vhp-grid--4{grid-template-columns:repeat(2,1fr)}}
+  @media (min-width:768px){.vhp-grid--4md,.vhp-grid--2{grid-template-columns:repeat(2,1fr)}}
+  @media (min-width:1024px){.vhp__wrap{padding:0 2rem}.vhp-grid--4{grid-template-columns:repeat(4,1fr)}}
+  @media (min-width:1280px){.vhp-grid--4md{grid-template-columns:repeat(4,1fr)}}
+</style>
+<style>
+  .vhp-faq{max-width:48rem;margin:2.5rem auto 0;display:grid;gap:.75rem}
+  .vhp-faq details{border:1px solid var(--vh-border);border-radius:.75rem;background:#fff;padding:.25rem 1.5rem;margin:0}
+  .vhp-faq summary{display:flex;align-items:center;gap:1rem;padding:1rem 0;cursor:pointer;list-style:none;font-weight:700;color:var(--vh-navy)}
+  .vhp-faq summary::-webkit-details-marker{display:none}
+  .vhp-faq summary::marker{content:""}
+  .vhp-faq__num{font-size:.875rem;color:var(--vh-primary)}
+  .vhp-faq__q{flex:1}
+  .vhp-faq summary svg{width:1.25rem;height:1.25rem;flex-shrink:0;transition:transform .2s}
+  .vhp-faq details[open] summary svg{transform:rotate(180deg)}
+  .vhp-faq__a{padding:0 0 1.25rem 2.25rem!important;line-height:1.65;color:var(--vh-muted)}
+</style>
+<section class="vhp vhp--alt">
+  <div class="vhp__wrap">
+    <div class="vhp-head vhp-head--center">
+      <p class="vhp-eyebrow">Frequently asked questions</p>
+      <h2 class="vhp-title">AI Services questions</h2>
+    </div>
+    <div class="vhp-faq">
+      <details open>
+        <summary><span class="vhp-faq__num">01</span><span class="vhp-faq__q">How is renting an AI server different from regular cloud?</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <p class="vhp-faq__a">You get a dedicated GPU server with a clear configuration, unshared resources and a team that helps you deploy your AI services — not just a virtual machine.</p>
+      </details>
+      <details>
+        <summary><span class="vhp-faq__num">02</span><span class="vhp-faq__q">Is our data kept secure?</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <p class="vhp-faq__a">Dedicated servers are isolated; for stricter requirements, our Private AI (air-gapped) option keeps data inside your own systems. Details are agreed during the assessment.</p>
+      </details>
+      <details>
+        <summary><span class="vhp-faq__num">03</span><span class="vhp-faq__q">What is the minimum term and cost?</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <p class="vhp-faq__a">It depends on the model (hourly, monthly or dedicated cluster) and GPU type. Vu Hai quotes based on your actual configuration and term — leave your details for a consultation.</p>
+      </details>
+      <details>
+        <summary><span class="vhp-faq__num">04</span><span class="vhp-faq__q">Does Vu Hai help deploy AI models?</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <p class="vhp-faq__a">Yes. Our team sets up environments, builds chatbots/RAG and inference APIs, and integrates them with systems such as VAN-Logistic or ERP.</p>
+      </details>
+    </div>
+  </div>
+</section>
+<!-- ===== /07. Dịch vụ AI — Câu hỏi thường gặp ===== -->

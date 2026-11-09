@@ -1,0 +1,95 @@
+<!-- ===== Vũ Hải — 03. Vì sao chọn Vũ Hải. Dán vào block "HTML tùy chỉnh" ===== -->
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800&display=swap&subset=vietnamese" rel="stylesheet">
+
+<style>
+  .vh-why{--vh-primary:#0e6ace;--vh-navy:#004188;--vh-secondary:#f0f5fa;--vh-fg:#202730;--vh-muted:#5a6472;--vh-border:#dbe2e9;
+    position:relative;width:100vw;margin-left:calc(50% - 50vw);padding:5rem 0;background:var(--vh-secondary);font-family:"Nunito Sans",system-ui,sans-serif;color:var(--vh-fg);box-sizing:border-box}
+  .vh-why *,.vh-why *::before,.vh-why *::after{box-sizing:border-box}
+  .vh-why h2,.vh-why h3,.vh-why h4,.vh-why p{margin:0;padding:0}
+  .vh-why a{text-decoration:none}
+  .vh-why__wrap{max-width:80rem;margin:0 auto;padding:0 1rem}
+  .vh-why__head{max-width:48rem;margin:0 auto;text-align:center}
+  .vh-why__eyebrow{font-size:.875rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--vh-primary)}
+  .vh-why__title{margin-top:.5rem!important;font-size:1.875rem;line-height:1.25;font-weight:800;color:var(--vh-navy);text-wrap:balance}
+  .vh-why__desc{margin-top:1rem!important;font-size:1.125rem;line-height:1.65;color:var(--vh-muted)}
+
+  .vh-why__grid{margin-top:2.5rem;display:grid;gap:1.25rem}
+  .vh-why__item{border-radius:1rem;background:#fff;padding:1.5rem;box-shadow:0 1px 3px rgba(0,0,0,.06)}
+  .vh-why__icon{display:grid;place-items:center;width:3rem;height:3rem;border-radius:.75rem;background:var(--vh-secondary);color:var(--vh-primary)}
+  .vh-why__icon svg{width:1.5rem;height:1.5rem}
+  .vh-why__item h3{margin-top:1rem!important;font-size:1.125rem;font-weight:800;color:var(--vh-navy)}
+  .vh-why__item p{margin-top:.5rem!important;color:var(--vh-muted);line-height:1.6}
+
+  .vh-why__sub{margin-top:4rem!important;text-align:center;font-size:1.5rem;font-weight:800;color:var(--vh-navy)}
+  .vh-why__projects{margin-top:2rem;display:grid;gap:1.25rem}
+  .vh-why__project{display:flex;flex-direction:column;border:1px solid var(--vh-border);border-radius:1rem;background:#fff;padding:1.5rem}
+  .vh-why__project h4{font-size:1.125rem;font-weight:800;color:var(--vh-navy)}
+  .vh-why__project p{flex:1;margin-top:.75rem!important;line-height:1.65;color:var(--vh-muted)}
+  .vh-why__link{margin-top:1.25rem;display:inline-flex;align-items:center;gap:.5rem;font-weight:700;color:var(--vh-primary)!important}
+  .vh-why__link:hover{text-decoration:underline}
+  .vh-why__link svg{width:1rem;height:1rem}
+
+  @media (min-width:640px){
+    .vh-why__wrap{padding:0 1.5rem}
+    .vh-why__title{font-size:2.25rem}
+    .vh-why__grid{grid-template-columns:repeat(2,1fr)}
+  }
+  @media (min-width:1024px){
+    .vh-why__wrap{padding:0 2rem}
+    .vh-why__grid{grid-template-columns:repeat(4,1fr)}
+    .vh-why__projects{grid-template-columns:repeat(3,1fr)}
+  }
+</style>
+
+<section class="vh-why">
+  <div class="vh-why__wrap">
+    <div class="vh-why__head">
+      <p class="vh-why__eyebrow">Vì sao doanh nghiệp chọn Vũ Hải?</p>
+      <h2 class="vh-why__title">Giải pháp đúng nghiệp vụ. Triển khai đúng thực tế.</h2>
+      <p class="vh-why__desc">Từ VAN-Logistic, Customize, ERP đến hạ tầng AI Server, Vũ Hải đồng hành để doanh nghiệp vận hành hiệu quả và mở rộng bền vững.</p>
+    </div>
+
+    <div class="vh-why__grid">
+      <div class="vh-why__item">
+        <span class="vh-why__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg></span>
+        <h3>Am hiểu nghiệp vụ xuất nhập khẩu</h3>
+        <p>Giải pháp phát triển từ quy trình C/O, nguyên phụ liệu và hồ sơ xuất nhập khẩu thực tế.</p>
+      </div>
+      <div class="vh-why__item">
+        <span class="vh-why__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="8" height="8" x="3" y="3" rx="2"/><path d="M7 11v4a2 2 0 0 0 2 2h4"/><rect width="8" height="8" x="13" y="13" rx="2"/></svg></span>
+        <h3>Thiết kế theo quy trình doanh nghiệp</h3>
+        <p>Khảo sát quy trình, dữ liệu và yêu cầu quản trị trước khi thiết kế phương án.</p>
+      </div>
+      <div class="vh-why__item">
+        <span class="vh-why__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20v2M12 2v2M17 20v2M17 2v2M2 12h2M2 17h2M2 7h2M20 12h2M20 17h2M20 7h2M7 20v2M7 2v2"/><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="8" y="8" width="8" height="8" rx="1"/></svg></span>
+        <h3>Hạ tầng AI sẵn sàng</h3>
+        <p>Ngoài phần mềm nghiệp vụ, Vũ Hải cung cấp AI Server để doanh nghiệp triển khai dịch vụ AI riêng.</p>
+      </div>
+      <div class="vh-why__item">
+        <span class="vh-why__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m11 17 2 2a1 1 0 1 0 3-3"/><path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4"/><path d="m21 3 1 11h-2"/><path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3"/><path d="M3 4h8"/></svg></span>
+        <h3>Đồng hành &amp; mở rộng lâu dài</h3>
+        <p>Hỗ trợ từ triển khai đến vận hành, đào tạo và điều chỉnh theo nhu cầu thực tế.</p>
+      </div>
+    </div>
+
+    <h3 class="vh-why__sub">Dấu ấn hợp tác &amp; triển khai thực tế</h3>
+    <div class="vh-why__projects">
+      <div class="vh-why__project">
+        <h4>SmallPin Logistics</h4>
+        <p>Triển khai VAN-Logistic phiên bản SMP, thiết kế riêng để quản trị khách hàng, nguyên phụ liệu và Trừ lùi theo quy trình vận hành.</p>
+        <a class="vh-why__link" href="https://vuhai.co/" target="_blank" rel="noreferrer">Xem dự án triển khai <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+      </div>
+      <div class="vh-why__project">
+        <h4>TCOM Global Logistics</h4>
+        <p>Lựa chọn Vũ Hải triển khai độc quyền giải pháp quản lý, Trừ lùi nguyên phụ liệu và hỗ trợ vận hành nghiệp vụ xuất nhập khẩu.</p>
+        <a class="vh-why__link" href="https://vuhai.co/" target="_blank" rel="noreferrer">Xem dự án triển khai <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+      </div>
+      <div class="vh-why__project">
+        <h4>eComDX</h4>
+        <p>Hợp tác chiến lược cùng Trung tâm Phát triển Thương mại điện tử và Công nghệ số – Bộ Công Thương về dịch vụ hỗ trợ nâng cao và giải pháp ký số.</p>
+        <a class="vh-why__link" href="https://vuhai.co/" target="_blank" rel="noreferrer">Xem thông tin hợp tác <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ===== /03. Vì sao chọn Vũ Hải ===== -->

@@ -1,0 +1,27 @@
+/* Nút chuyển ngữ (Polylang) — dán CUỐI CSS bổ sung, sau phần Dropdown menu */
+#masthead .main-header-menu > .lang-item { display: flex; align-items: center; }
+#masthead .main-header-menu > .lang-item > .menu-link {
+  display: inline-flex !important;
+  align-items: center;
+  gap: .4rem;
+  height: 2.25rem;
+  margin: 0 .25rem;
+  padding: 0 .85rem !important;
+  border: 1px solid #dbe2e9;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1;
+  color: #004188 !important;
+  transition: background-color .15s, border-color .15s;
+}
+#masthead .main-header-menu > .lang-item > .menu-link:hover {
+  background: #f0f5fa;
+  border-color: #0e6ace;
+}
+#masthead .lang-item img {
+  width: 18px !important;
+  height: 12px !important;
+  border-radius: 2px;
+  object-fit: cover;
+}

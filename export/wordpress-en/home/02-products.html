@@ -1,0 +1,127 @@
+<!-- ===== Vũ Hải [EN] — 02. Danh mục sản phẩm. Dán vào block "HTML tùy chỉnh" ===== -->
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+  .vh-cat{--vh-primary:#0e6ace;--vh-navy:#004188;--vh-secondary:#f0f5fa;--vh-fg:#202730;--vh-muted:#5a6472;--vh-border:#dbe2e9;--vh-ink:#062b5f;--vh-ink-muted:#c0d0e4;
+    position:relative;width:100vw;margin-left:calc(50% - 50vw);padding:5rem 0;background:#fff;font-family:"Nunito Sans",system-ui,sans-serif;color:var(--vh-fg);box-sizing:border-box;scroll-margin-top:6rem}
+  .vh-cat *,.vh-cat *::before,.vh-cat *::after{box-sizing:border-box}
+  .vh-cat h2,.vh-cat h3,.vh-cat p,.vh-cat ul{margin:0;padding:0}
+  .vh-cat a{text-decoration:none}
+  .vh-cat__wrap{max-width:80rem;margin:0 auto;padding:0 1rem}
+  .vh-cat__head{max-width:48rem}
+  .vh-cat__eyebrow{font-size:.875rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--vh-primary)}
+  .vh-cat__title{margin-top:.5rem!important;font-size:1.875rem;line-height:1.25;font-weight:800;color:var(--vh-navy);text-wrap:balance}
+  .vh-cat__desc{margin-top:1rem!important;font-size:1.125rem;line-height:1.65;color:var(--vh-muted)}
+  .vh-cat__grid{margin-top:3rem;display:grid;gap:1.5rem}
+
+  .vh-cat__lead{position:relative;display:flex;flex-direction:column;height:100%;overflow:hidden;border-radius:1rem;background:var(--vh-ink);color:#fff!important;padding:2rem;box-shadow:0 10px 25px rgba(6,43,95,.2);transition:box-shadow .2s}
+  .vh-cat__lead:hover{box-shadow:0 20px 40px rgba(6,43,95,.3)}
+  .vh-cat__lead::before{content:"";position:absolute;inset:0;opacity:.6;
+    background-image:linear-gradient(to right,rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(to bottom,rgba(255,255,255,.05) 1px,transparent 1px);background-size:64px 64px;
+    -webkit-mask-image:linear-gradient(to bottom right,#000,transparent 70%);mask-image:linear-gradient(to bottom right,#000,transparent 70%)}
+  .vh-cat__lead > *{position:relative}
+  .vh-cat__badge{display:inline-flex;width:fit-content;border-radius:9999px;background:var(--vh-primary);padding:.25rem .875rem;font-size:.75rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase}
+  .vh-cat__lead-icon{margin-top:1.5rem;display:grid;place-items:center;width:3.5rem;height:3.5rem;border-radius:1rem;background:rgba(255,255,255,.1)}
+  .vh-cat__lead-icon svg{width:1.75rem;height:1.75rem}
+  .vh-cat__lead h3{margin-top:1.25rem!important;font-size:2.25rem;font-weight:800;color:#fff}
+  .vh-cat__lead-sub{margin-top:.25rem!important;font-size:1.125rem;font-weight:600;color:var(--vh-ink-muted)}
+  .vh-cat__lead-desc{margin-top:1.25rem!important;line-height:1.65;color:var(--vh-ink-muted)}
+  .vh-cat__checks{list-style:none;margin-top:1.5rem!important;display:grid;gap:.625rem}
+  .vh-cat__checks li{display:flex;align-items:flex-start;gap:.625rem}
+  .vh-cat__checks svg{margin-top:.25rem;width:1rem;height:1rem;flex-shrink:0}
+  .vh-cat__more{margin-top:2rem;display:inline-flex;align-items:center;gap:.5rem;font-weight:700}
+  .vh-cat__more svg{width:1.25rem;height:1.25rem;transition:transform .2s}
+  .vh-cat__lead:hover .vh-cat__more svg{transform:translateX(4px)}
+
+  .vh-cat__card{display:flex;gap:1.25rem;height:100%;border:1px solid var(--vh-border);border-radius:1rem;background:#fff;padding:1.5rem;transition:border-color .2s}
+  .vh-cat__card:hover{border-color:var(--vh-primary)}
+  .vh-cat__icon{display:grid;place-items:center;flex-shrink:0;width:3rem;height:3rem;border-radius:.75rem;background:var(--vh-secondary);color:var(--vh-primary)}
+  .vh-cat__icon svg{width:1.5rem;height:1.5rem}
+  .vh-cat__name{display:block;font-size:1.25rem;font-weight:800;color:var(--vh-navy)}
+  .vh-cat__sub{display:block;font-size:.875rem;font-weight:600;color:var(--vh-primary)}
+  .vh-cat__text{display:block;margin-top:.5rem;font-size:.95rem;line-height:1.65;color:var(--vh-muted)}
+
+  @media (min-width:640px){
+    .vh-cat__wrap{padding:0 1.5rem}
+    .vh-cat__title{font-size:2.25rem}
+    .vh-cat__lead{padding:2.5rem}
+  }
+  @media (min-width:1024px){
+    .vh-cat__wrap{padding:0 2rem}
+    .vh-cat__grid{grid-template-columns:1fr 1fr}
+    .vh-cat__grid > :first-child{grid-row:span 2}
+  }
+</style>
+
+<section id="danh-muc" class="vh-cat">
+  <div class="vh-cat__wrap">
+    <div class="vh-cat__head">
+      <p class="vh-cat__eyebrow">Products & Solutions</p>
+      <h2 class="vh-cat__title">Technology solutions for business, from AI infrastructure to operations</h2>
+      <p class="vh-cat__desc">AI Services and Data Center are Vu Hai's core offerings; our business software solutions can be combined with them into one unified system.</p>
+    </div>
+
+    <div class="vh-cat__grid">
+      <!-- Thẻ lớn: Dịch vụ AI -->
+      <a class="vh-cat__lead" href="/en/ai-services/">
+        <span class="vh-cat__badge">Core offering</span>
+        <span class="vh-cat__lead-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20v2M12 2v2M17 20v2M17 2v2M2 12h2M2 17h2M2 7h2M20 12h2M20 17h2M20 7h2M7 20v2M7 2v2"/><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="8" y="8" width="8" height="8" rx="1"/></svg></span>
+        <h3>AI Services</h3>
+        <p class="vh-cat__lead-sub">Rent GPU infrastructure for AI services</p>
+        <p class="vh-cat__lead-desc">High-performance GPU servers rented on demand, with hands-on support for deploying AI models, internal chatbots and computer vision services.</p>
+        <ul class="vh-cat__checks">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>NVIDIA HGX / GB200 GPUs with NVLink</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Hourly, monthly or dedicated cluster rental</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>24/7 deployment and operations support</li>
+        </ul>
+        <span class="vh-cat__more">View AI Services <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+      </a>
+
+      <a class="vh-cat__card" href="/en/data-center-services/">
+        <span class="vh-cat__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="8" x="2" y="2" rx="2"/><rect width="20" height="8" x="2" y="14" rx="2"/><path d="M6 6h.01M6 18h.01"/></svg></span>
+        <span>
+          <span class="vh-cat__name">Data center</span>
+          <span class="vh-cat__sub">Rack rental, private cloud, connectivity</span>
+          <span class="vh-cat__text">A purpose-built facility with 2N redundant power, liquid cooling and 24/7 monitoring for your systems.</span>
+        </span>
+      </a>
+
+      <a class="vh-cat__card" href="https://vuhai.co/">
+        <span class="vh-cat__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></svg></span>
+        <span>
+          <span class="vh-cat__name">VAN-Logistic</span>
+          <span class="vh-cat__sub">Import–export operations, C/O, material deduction</span>
+          <span class="vh-cat__text">A platform for import–export companies to manage files, documents, materials and per-file material deduction.</span>
+        </span>
+      </a>
+
+      <a class="vh-cat__card" href="https://vuhai.co/giai-phap-doanh-nghiep/" target="_blank" rel="noreferrer">
+        <span class="vh-cat__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"/><path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"/><path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17"/></svg></span>
+        <span>
+          <span class="vh-cat__name">ERP All-in-One</span>
+          <span class="vh-cat__sub">Run your whole business on one system</span>
+          <span class="vh-cat__text">Connect customers, contracts, tasks and import–export operations; deploy module by module or all at once.</span>
+        </span>
+      </a>
+
+      <a class="vh-cat__card" href="https://vuhai.co/chu-ky-so/" target="_blank" rel="noreferrer">
+        <span class="vh-cat__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.364 13.634a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506l4.013-4.009a1 1 0 0 0-3.004-3.004z"/><path d="M14.487 7.858A1 1 0 0 1 14 7V2"/><path d="M20 19.645V20a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l2.516 2.516"/><path d="M8 18h1"/></svg></span>
+        <span>
+          <span class="vh-cat__name">Digital Signature</span>
+          <span class="vh-cat__sub">Remote digital signing</span>
+          <span class="vh-cat__text">Sign documents and contracts directly, no USB token required.</span>
+        </span>
+      </a>
+
+      <a class="vh-cat__card" href="https://vuhai.co/giai-phap-hoa-don-dien-tu/" target="_blank" rel="noreferrer">
+        <span class="vh-cat__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 16H8"/><path d="M14 8H8"/><path d="M16 12H8"/><path d="M4 3a1 1 0 0 1 1-1 1.3 1.3 0 0 1 .7.2l.933.6a1.3 1.3 0 0 0 1.4 0l.934-.6a1.3 1.3 0 0 1 1.4 0l.933.6a1.3 1.3 0 0 0 1.4 0l.933-.6a1.3 1.3 0 0 1 1.4 0l.934.6a1.3 1.3 0 0 0 1.4 0l.933-.6A1.3 1.3 0 0 1 19 2a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1 1.3 1.3 0 0 1-.7-.2l-.933-.6a1.3 1.3 0 0 0-1.4 0l-.934.6a1.3 1.3 0 0 1-1.4 0l-.933-.6a1.3 1.3 0 0 0-1.4 0l-.933.6a1.3 1.3 0 0 1-1.4 0l-.934-.6a1.3 1.3 0 0 0-1.4 0l-.933.6a1.3 1.3 0 0 1-.7.2 1 1 0 0 1-1-1z"/></svg></span>
+        <span>
+          <span class="vh-cat__name">E-Invoice</span>
+          <span class="vh-cat__sub">Issue and manage invoices</span>
+          <span class="vh-cat__text">Issue, look up and manage e-invoices, connected to your services and payments.</span>
+        </span>
+      </a>
+    </div>
+  </div>
+</section>
+<!-- ===== /02. Danh mục sản phẩm ===== -->

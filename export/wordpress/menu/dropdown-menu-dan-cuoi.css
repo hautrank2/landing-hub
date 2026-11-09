@@ -1,0 +1,129 @@
+/* Dropdown menu */
+} /* Vũ Hải: đóng rule giỏ hàng còn hở ở phía trên. ĐỪNG XOÁ 2 dòng này. */
+.vh-css-guard {}
+
+/* =====================================================================
+   Vũ Hải — Dropdown menu đẹp hơn (theme Astra)
+   Dán vào: Giao diện → Tùy biến → CSS bổ sung (Additional CSS) → Xuất bản
+   Chỉ áp dụng trên máy tính (>= 922px); menu điện thoại giữ nguyên.
+   ===================================================================== */
+@media (min-width: 922px) {
+  /* ---------- Tất cả dropdown ---------- */
+  #masthead .main-header-menu > .menu-item > .sub-menu {
+    min-width: 15rem;
+    padding: .5rem !important;
+    background: #fff !important;
+    border: 1px solid #dbe2e9 !important;
+    border-radius: 14px !important;
+    box-shadow: 0 18px 40px -12px rgba(0, 65, 136, .25), 0 4px 12px rgba(0, 0, 0, .06) !important;
+  }
+  #masthead .main-header-menu > .menu-item:hover > .sub-menu,
+  #masthead .main-header-menu > .menu-item:focus-within > .sub-menu {
+    animation: vhDropIn .16s ease-out;
+  }
+  /* khoảng hở giữa menu và dropdown vẫn giữ hover */
+  #masthead .main-header-menu > .menu-item > .sub-menu::before {
+    content: "";
+    position: absolute;
+    left: 0; right: 0; top: -14px; height: 14px;
+  }
+  #masthead .main-header-menu > .menu-item > .sub-menu > .menu-item > .menu-link {
+    border: 0 !important;
+    border-radius: 9px;
+    padding: .65rem .85rem !important;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.35;
+    color: #202730;
+    transition: background-color .15s, color .15s;
+  }
+  #masthead .main-header-menu > .menu-item > .sub-menu > .menu-item > .menu-link:hover,
+  #masthead .main-header-menu > .menu-item > .sub-menu > .menu-item.current-menu-item > .menu-link {
+    background: #f0f5fa;
+    color: #0e6ace;
+  }
+  #masthead .main-header-menu .sub-menu .ast-icon.icon-arrow { display: none !important; }
+
+  /* ---------- "AI & Data Center" và "Phần mềm": lưới 2 cột có icon + mô tả ---------- */
+  #masthead .main-header-menu > :is(#menu-item-26059, #menu-item-22309, .menu-item:has(> .sub-menu > .menu-item > .menu-link:is([href*="/ai-service"], [href*="/data-center"], [href*="/trang-chu-2-1"], [href*="/van-logistic"], [href*="/giai-phap-doanh-nghiep"], [href*="/chu-ky-so"], [href*="/giai-phap-hoa-don-dien-tu"]))) > .sub-menu {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: .35rem;
+    width: 36rem;
+    padding: .75rem !important;
+  }
+  #masthead .main-header-menu > :is(#menu-item-26059, #menu-item-22309, .menu-item:has(> .sub-menu > .menu-item > .menu-link:is([href*="/ai-service"], [href*="/data-center"], [href*="/trang-chu-2-1"], [href*="/van-logistic"], [href*="/giai-phap-doanh-nghiep"], [href*="/chu-ky-so"], [href*="/giai-phap-hoa-don-dien-tu"]))) > .sub-menu > .menu-item { width: auto; }
+  #masthead .main-header-menu > :is(#menu-item-26059, #menu-item-22309, .menu-item:has(> .sub-menu > .menu-item > .menu-link:is([href*="/ai-service"], [href*="/data-center"], [href*="/trang-chu-2-1"], [href*="/van-logistic"], [href*="/giai-phap-doanh-nghiep"], [href*="/chu-ky-so"], [href*="/giai-phap-hoa-don-dien-tu"]))) > .sub-menu > .menu-item > .menu-link {
+    display: grid !important;
+    grid-template-columns: 2.75rem 1fr;
+    column-gap: .8rem;
+    align-items: center;
+    height: 100%;
+    padding: .7rem !important;
+    border-radius: 12px;
+  }
+  #masthead .main-header-menu > :is(#menu-item-26059, #menu-item-22309, .menu-item:has(> .sub-menu > .menu-item > .menu-link:is([href*="/ai-service"], [href*="/data-center"], [href*="/trang-chu-2-1"], [href*="/van-logistic"], [href*="/giai-phap-doanh-nghiep"], [href*="/chu-ky-so"], [href*="/giai-phap-hoa-don-dien-tu"]))) > .sub-menu > .menu-item > .menu-link::before {
+    content: "";
+    grid-row: 1 / span 2;
+    width: 2.75rem; height: 2.75rem;
+    border-radius: 12px;
+    background: #f0f5fa no-repeat center / 1.3rem;
+    transition: background-color .15s;
+  }
+  #masthead .main-header-menu > :is(#menu-item-26059, #menu-item-22309, .menu-item:has(> .sub-menu > .menu-item > .menu-link:is([href*="/ai-service"], [href*="/data-center"], [href*="/trang-chu-2-1"], [href*="/van-logistic"], [href*="/giai-phap-doanh-nghiep"], [href*="/chu-ky-so"], [href*="/giai-phap-hoa-don-dien-tu"]))) > .sub-menu > .menu-item > .menu-link:hover::before { background-color: #fff; }
+  #masthead .main-header-menu > :is(#menu-item-26059, #menu-item-22309, .menu-item:has(> .sub-menu > .menu-item > .menu-link:is([href*="/ai-service"], [href*="/data-center"], [href*="/trang-chu-2-1"], [href*="/van-logistic"], [href*="/giai-phap-doanh-nghiep"], [href*="/chu-ky-so"], [href*="/giai-phap-hoa-don-dien-tu"]))) > .sub-menu > .menu-item > .menu-link .menu-text {
+    display: flex; align-items: center; gap: .45rem;
+    font-weight: 800;
+    color: #004188;
+  }
+  #masthead .main-header-menu > :is(#menu-item-26059, #menu-item-22309, .menu-item:has(> .sub-menu > .menu-item > .menu-link:is([href*="/ai-service"], [href*="/data-center"], [href*="/trang-chu-2-1"], [href*="/van-logistic"], [href*="/giai-phap-doanh-nghiep"], [href*="/chu-ky-so"], [href*="/giai-phap-hoa-don-dien-tu"]))) > .sub-menu > .menu-item > .menu-link::after {
+    grid-column: 2;
+    margin-top: .1rem;
+    font-size: 13.5px;
+    font-weight: 400;
+    line-height: 1.35;
+    color: #5a6472;
+  }
+  #masthead .main-header-menu > :is(#menu-item-26059, #menu-item-22309, .menu-item:has(> .sub-menu > .menu-item > .menu-link:is([href*="/ai-service"], [href*="/data-center"], [href*="/trang-chu-2-1"], [href*="/van-logistic"], [href*="/giai-phap-doanh-nghiep"], [href*="/chu-ky-so"], [href*="/giai-phap-hoa-don-dien-tu"]))) > .sub-menu > .menu-item > .menu-link[href*="/ai-service"]::before { background-image: url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%27%230e6ace%27 stroke-width=%272%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3E%3Cpath d=%27M12 20v2%27/%3E%3Cpath d=%27M12 2v2%27/%3E%3Cpath d=%27M17 20v2%27/%3E%3Cpath d=%27M17 2v2%27/%3E%3Cpath d=%27M2 12h2%27/%3E%3Cpath d=%27M2 17h2%27/%3E%3Cpath d=%27M2 7h2%27/%3E%3Cpath d=%27M20 12h2%27/%3E%3Cpath d=%27M20 17h2%27/%3E%3Cpath d=%27M20 7h2%27/%3E%3Cpath d=%27M7 20v2%27/%3E%3Cpath d=%27M7 2v2%27/%3E%3Crect x=%274%27 y=%274%27 width=%2716%27 height=%2716%27 rx=%272%27/%3E%3Crect x=%278%27 y=%278%27 width=%278%27 height=%278%27 rx=%271%27/%3E%3C/svg%3E"); }
+  #masthead .main-header-menu > :is(#menu-item-26059, #menu-item-22309, .menu-item:has(> .sub-menu > .menu-item > .menu-link:is([href*="/ai-service"], [href*="/data-center"], [href*="/trang-chu-2-1"], [href*="/van-logistic"], [href*="/giai-phap-doanh-nghiep"], [href*="/chu-ky-so"], [href*="/giai-phap-hoa-don-dien-tu"]))) > .sub-menu > .menu-item > .menu-link[href*="/ai-service"]::after { content: "Thuê GPU server, triển khai dịch vụ AI"; }
+  #masthead .main-header-menu > :is(#menu-item-26059, #menu-item-22309, .menu-item:has(> .sub-menu > .menu-item > .menu-link:is([href*="/ai-service"], [href*="/data-center"], [href*="/trang-chu-2-1"], [href*="/van-logistic"], [href*="/giai-phap-doanh-nghiep"], [href*="/chu-ky-so"], [href*="/giai-phap-hoa-don-dien-tu"]))) > .sub-menu > .menu-item > .menu-link[href*="/ai-service"] .menu-text::after {
+    content: "Mới";
+    border-radius: 999px; background: #0e6ace; color: #fff;
+    padding: .1rem .45rem; font-size: 10.5px; font-weight: 800; letter-spacing: .03em; text-transform: uppercase;
+  }
+  #masthead .main-header-menu > :is(#menu-item-26059, #menu-item-22309, .menu-item:has(> .sub-menu > .menu-item > .menu-link:is([href*="/ai-service"], [href*="/data-center"], [href*="/trang-chu-2-1"], [href*="/van-logistic"], [href*="/giai-phap-doanh-nghiep"], [href*="/chu-ky-so"], [href*="/giai-phap-hoa-don-dien-tu"]))) > .sub-menu > .menu-item > .menu-link[href*="/data-center"]::before { background-image: url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%27%230e6ace%27 stroke-width=%272%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3E%3Crect width=%2720%27 height=%278%27 x=%272%27 y=%272%27 rx=%272%27 ry=%272%27/%3E%3Crect width=%2720%27 height=%278%27 x=%272%27 y=%2714%27 rx=%272%27 ry=%272%27/%3E%3Cline x1=%276%27 x2=%276.01%27 y1=%276%27 y2=%276%27/%3E%3Cline x1=%276%27 x2=%276.01%27 y1=%2718%27 y2=%2718%27/%3E%3C/svg%3E"); }
+  #masthead .main-header-menu > :is(#menu-item-26059, #menu-item-22309, .menu-item:has(> .sub-menu > .menu-item > .menu-link:is([href*="/ai-service"], [href*="/data-center"], [href*="/trang-chu-2-1"], [href*="/van-logistic"], [href*="/giai-phap-doanh-nghiep"], [href*="/chu-ky-so"], [href*="/giai-phap-hoa-don-dien-tu"]))) > .sub-menu > .menu-item > .menu-link[href*="/data-center"]::after { content: "Thuê tủ rack, private cloud, kết nối mạng"; }
+  #masthead .main-header-menu > :is(#menu-item-26059, #menu-item-22309, .menu-item:has(> .sub-menu > .menu-item > .menu-link:is([href*="/ai-service"], [href*="/data-center"], [href*="/trang-chu-2-1"], [href*="/van-logistic"], [href*="/giai-phap-doanh-nghiep"], [href*="/chu-ky-so"], [href*="/giai-phap-hoa-don-dien-tu"]))) > .sub-menu > .menu-item > .menu-link[href*="/data-center"] .menu-text::after {
+    content: "Mới";
+    border-radius: 999px; background: #0e6ace; color: #fff;
+    padding: .1rem .45rem; font-size: 10.5px; font-weight: 800; letter-spacing: .03em; text-transform: uppercase;
+  }
+  #masthead .main-header-menu > :is(#menu-item-26059, #menu-item-22309, .menu-item:has(> .sub-menu > .menu-item > .menu-link:is([href*="/ai-service"], [href*="/data-center"], [href*="/trang-chu-2-1"], [href*="/van-logistic"], [href*="/giai-phap-doanh-nghiep"], [href*="/chu-ky-so"], [href*="/giai-phap-hoa-don-dien-tu"]))) > .sub-menu > .menu-item > .menu-link[href*="/trang-chu-2-1"]::before { background-image: url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%27%230e6ace%27 stroke-width=%272%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3E%3Cpath d=%27M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2%27/%3E%3Cpath d=%27M15 18H9%27/%3E%3Cpath d=%27M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14%27/%3E%3Ccircle cx=%2717%27 cy=%2718%27 r=%272%27/%3E%3Ccircle cx=%277%27 cy=%2718%27 r=%272%27/%3E%3C/svg%3E"); }
+  #masthead .main-header-menu > :is(#menu-item-26059, #menu-item-22309, .menu-item:has(> .sub-menu > .menu-item > .menu-link:is([href*="/ai-service"], [href*="/data-center"], [href*="/trang-chu-2-1"], [href*="/van-logistic"], [href*="/giai-phap-doanh-nghiep"], [href*="/chu-ky-so"], [href*="/giai-phap-hoa-don-dien-tu"]))) > .sub-menu > .menu-item > .menu-link[href*="/trang-chu-2-1"]::after { content: "Nghiệp vụ xuất nhập khẩu, C/O, Trừ lùi"; }
+  #masthead .main-header-menu > :is(#menu-item-26059, #menu-item-22309, .menu-item:has(> .sub-menu > .menu-item > .menu-link:is([href*="/ai-service"], [href*="/data-center"], [href*="/trang-chu-2-1"], [href*="/van-logistic"], [href*="/giai-phap-doanh-nghiep"], [href*="/chu-ky-so"], [href*="/giai-phap-hoa-don-dien-tu"]))) > .sub-menu > .menu-item > .menu-link[href*="/van-logistic"]::before { background-image: url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%27%230e6ace%27 stroke-width=%272%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3E%3Cpath d=%27M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2%27/%3E%3Cpath d=%27M15 18H9%27/%3E%3Cpath d=%27M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14%27/%3E%3Ccircle cx=%2717%27 cy=%2718%27 r=%272%27/%3E%3Ccircle cx=%277%27 cy=%2718%27 r=%272%27/%3E%3C/svg%3E"); }
+  #masthead .main-header-menu > :is(#menu-item-26059, #menu-item-22309, .menu-item:has(> .sub-menu > .menu-item > .menu-link:is([href*="/ai-service"], [href*="/data-center"], [href*="/trang-chu-2-1"], [href*="/van-logistic"], [href*="/giai-phap-doanh-nghiep"], [href*="/chu-ky-so"], [href*="/giai-phap-hoa-don-dien-tu"]))) > .sub-menu > .menu-item > .menu-link[href*="/van-logistic"]::after { content: "Nghiệp vụ xuất nhập khẩu, C/O, Trừ lùi"; }
+  #masthead .main-header-menu > :is(#menu-item-26059, #menu-item-22309, .menu-item:has(> .sub-menu > .menu-item > .menu-link:is([href*="/ai-service"], [href*="/data-center"], [href*="/trang-chu-2-1"], [href*="/van-logistic"], [href*="/giai-phap-doanh-nghiep"], [href*="/chu-ky-so"], [href*="/giai-phap-hoa-don-dien-tu"]))) > .sub-menu > .menu-item > .menu-link[href*="/giai-phap-doanh-nghiep"]::before { background-image: url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%27%230e6ace%27 stroke-width=%272%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3E%3Cpath d=%27M10 12h4%27/%3E%3Cpath d=%27M10 8h4%27/%3E%3Cpath d=%27M14 21v-3a2 2 0 0 0-4 0v3%27/%3E%3Cpath d=%27M6 10H4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-2%27/%3E%3Cpath d=%27M6 21V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16%27/%3E%3C/svg%3E"); }
+  #masthead .main-header-menu > :is(#menu-item-26059, #menu-item-22309, .menu-item:has(> .sub-menu > .menu-item > .menu-link:is([href*="/ai-service"], [href*="/data-center"], [href*="/trang-chu-2-1"], [href*="/van-logistic"], [href*="/giai-phap-doanh-nghiep"], [href*="/chu-ky-so"], [href*="/giai-phap-hoa-don-dien-tu"]))) > .sub-menu > .menu-item > .menu-link[href*="/giai-phap-doanh-nghiep"]::after { content: "ERP All-in-One cho quản trị toàn diện"; }
+  #masthead .main-header-menu > :is(#menu-item-26059, #menu-item-22309, .menu-item:has(> .sub-menu > .menu-item > .menu-link:is([href*="/ai-service"], [href*="/data-center"], [href*="/trang-chu-2-1"], [href*="/van-logistic"], [href*="/giai-phap-doanh-nghiep"], [href*="/chu-ky-so"], [href*="/giai-phap-hoa-don-dien-tu"]))) > .sub-menu > .menu-item > .menu-link[href*="/chu-ky-so"]::before { background-image: url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%27%230e6ace%27 stroke-width=%272%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3E%3Cpath d=%27M14.364 13.634a2 2 0 0 0-.506.854l-.837 2.87a.5.5 0 0 0 .62.62l2.87-.837a2 2 0 0 0 .854-.506l4.013-4.009a1 1 0 0 0-3.004-3.004z%27/%3E%3Cpath d=%27M14.487 7.858A1 1 0 0 1 14 7V2%27/%3E%3Cpath d=%27M20 19.645V20a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l2.516 2.516%27/%3E%3Cpath d=%27M8 18h1%27/%3E%3C/svg%3E"); }
+  #masthead .main-header-menu > :is(#menu-item-26059, #menu-item-22309, .menu-item:has(> .sub-menu > .menu-item > .menu-link:is([href*="/ai-service"], [href*="/data-center"], [href*="/trang-chu-2-1"], [href*="/van-logistic"], [href*="/giai-phap-doanh-nghiep"], [href*="/chu-ky-so"], [href*="/giai-phap-hoa-don-dien-tu"]))) > .sub-menu > .menu-item > .menu-link[href*="/chu-ky-so"]::after { content: "Ký số từ xa hồ sơ và hợp đồng"; }
+  #masthead .main-header-menu > :is(#menu-item-26059, #menu-item-22309, .menu-item:has(> .sub-menu > .menu-item > .menu-link:is([href*="/ai-service"], [href*="/data-center"], [href*="/trang-chu-2-1"], [href*="/van-logistic"], [href*="/giai-phap-doanh-nghiep"], [href*="/chu-ky-so"], [href*="/giai-phap-hoa-don-dien-tu"]))) > .sub-menu > .menu-item > .menu-link[href*="/giai-phap-hoa-don-dien-tu"]::before { background-image: url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%27%230e6ace%27 stroke-width=%272%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3E%3Cpath d=%27M13 16H8%27/%3E%3Cpath d=%27M14 8H8%27/%3E%3Cpath d=%27M16 12H8%27/%3E%3Cpath d=%27M4 3a1 1 0 0 1 1-1 1.3 1.3 0 0 1 .7.2l.933.6a1.3 1.3 0 0 0 1.4 0l.934-.6a1.3 1.3 0 0 1 1.4 0l.933.6a1.3 1.3 0 0 0 1.4 0l.933-.6a1.3 1.3 0 0 1 1.4 0l.934.6a1.3 1.3 0 0 0 1.4 0l.933-.6A1.3 1.3 0 0 1 19 2a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1 1.3 1.3 0 0 1-.7-.2l-.933-.6a1.3 1.3 0 0 0-1.4 0l-.934.6a1.3 1.3 0 0 1-1.4 0l-.933-.6a1.3 1.3 0 0 0-1.4 0l-.933.6a1.3 1.3 0 0 1-1.4 0l-.934-.6a1.3 1.3 0 0 0-1.4 0l-.933.6a1.3 1.3 0 0 1-.7.2 1 1 0 0 1-1-1z%27/%3E%3C/svg%3E"); }
+  #masthead .main-header-menu > :is(#menu-item-26059, #menu-item-22309, .menu-item:has(> .sub-menu > .menu-item > .menu-link:is([href*="/ai-service"], [href*="/data-center"], [href*="/trang-chu-2-1"], [href*="/van-logistic"], [href*="/giai-phap-doanh-nghiep"], [href*="/chu-ky-so"], [href*="/giai-phap-hoa-don-dien-tu"]))) > .sub-menu > .menu-item > .menu-link[href*="/giai-phap-hoa-don-dien-tu"]::after { content: "Phát hành, quản lý hóa đơn điện tử"; }
+  /* ---------- Bản tiếng Anh (/en/, Polylang đặt <html lang="en-US">) ---------- */
+  html[lang^="en"] #masthead .main-header-menu > :is(#menu-item-26059, #menu-item-22309, .menu-item:has(> .sub-menu > .menu-item > .menu-link:is([href*="/ai-service"], [href*="/data-center"], [href*="/trang-chu-2-1"], [href*="/van-logistic"], [href*="/giai-phap-doanh-nghiep"], [href*="/chu-ky-so"], [href*="/giai-phap-hoa-don-dien-tu"]))) > .sub-menu > .menu-item > .menu-link[href*="/ai-service"]::after { content: "GPU server rental, AI service deployment"; }
+  html[lang^="en"] #masthead .main-header-menu > :is(#menu-item-26059, #menu-item-22309, .menu-item:has(> .sub-menu > .menu-item > .menu-link:is([href*="/ai-service"], [href*="/data-center"], [href*="/trang-chu-2-1"], [href*="/van-logistic"], [href*="/giai-phap-doanh-nghiep"], [href*="/chu-ky-so"], [href*="/giai-phap-hoa-don-dien-tu"]))) > .sub-menu > .menu-item > .menu-link[href*="/data-center"]::after { content: "Rack rental, private cloud, connectivity"; }
+  html[lang^="en"] #masthead .main-header-menu > :is(#menu-item-26059, #menu-item-22309, .menu-item:has(> .sub-menu > .menu-item > .menu-link:is([href*="/ai-service"], [href*="/data-center"], [href*="/trang-chu-2-1"], [href*="/van-logistic"], [href*="/giai-phap-doanh-nghiep"], [href*="/chu-ky-so"], [href*="/giai-phap-hoa-don-dien-tu"]))) > .sub-menu > .menu-item > .menu-link[href*="/trang-chu-2-1"]::after { content: "Import–export operations, C/O, material deduction"; }
+  html[lang^="en"] #masthead .main-header-menu > :is(#menu-item-26059, #menu-item-22309, .menu-item:has(> .sub-menu > .menu-item > .menu-link:is([href*="/ai-service"], [href*="/data-center"], [href*="/trang-chu-2-1"], [href*="/van-logistic"], [href*="/giai-phap-doanh-nghiep"], [href*="/chu-ky-so"], [href*="/giai-phap-hoa-don-dien-tu"]))) > .sub-menu > .menu-item > .menu-link[href*="/van-logistic"]::after { content: "Import–export operations, C/O, material deduction"; }
+  html[lang^="en"] #masthead .main-header-menu > :is(#menu-item-26059, #menu-item-22309, .menu-item:has(> .sub-menu > .menu-item > .menu-link:is([href*="/ai-service"], [href*="/data-center"], [href*="/trang-chu-2-1"], [href*="/van-logistic"], [href*="/giai-phap-doanh-nghiep"], [href*="/chu-ky-so"], [href*="/giai-phap-hoa-don-dien-tu"]))) > .sub-menu > .menu-item > .menu-link[href*="/giai-phap-doanh-nghiep"]::after { content: "All-in-One ERP for the whole business"; }
+  html[lang^="en"] #masthead .main-header-menu > :is(#menu-item-26059, #menu-item-22309, .menu-item:has(> .sub-menu > .menu-item > .menu-link:is([href*="/ai-service"], [href*="/data-center"], [href*="/trang-chu-2-1"], [href*="/van-logistic"], [href*="/giai-phap-doanh-nghiep"], [href*="/chu-ky-so"], [href*="/giai-phap-hoa-don-dien-tu"]))) > .sub-menu > .menu-item > .menu-link[href*="/chu-ky-so"]::after { content: "Remote signing for documents and contracts"; }
+  html[lang^="en"] #masthead .main-header-menu > :is(#menu-item-26059, #menu-item-22309, .menu-item:has(> .sub-menu > .menu-item > .menu-link:is([href*="/ai-service"], [href*="/data-center"], [href*="/trang-chu-2-1"], [href*="/van-logistic"], [href*="/giai-phap-doanh-nghiep"], [href*="/chu-ky-so"], [href*="/giai-phap-hoa-don-dien-tu"]))) > .sub-menu > .menu-item > .menu-link[href*="/giai-phap-hoa-don-dien-tu"]::after { content: "Issue and manage e-invoices"; }
+  html[lang^="en"] #masthead .main-header-menu > :is(#menu-item-26059, #menu-item-22309, .menu-item:has(> .sub-menu > .menu-item > .menu-link:is([href*="/ai-service"], [href*="/data-center"], [href*="/trang-chu-2-1"], [href*="/van-logistic"], [href*="/giai-phap-doanh-nghiep"], [href*="/chu-ky-so"], [href*="/giai-phap-hoa-don-dien-tu"]))) > .sub-menu > .menu-item > .menu-link .menu-text::after { content: "New"; }
+  /* mục chưa có icon riêng: icon mặc định */
+  #masthead .main-header-menu > :is(#menu-item-26059, #menu-item-22309, .menu-item:has(> .sub-menu > .menu-item > .menu-link:is([href*="/ai-service"], [href*="/data-center"], [href*="/trang-chu-2-1"], [href*="/van-logistic"], [href*="/giai-phap-doanh-nghiep"], [href*="/chu-ky-so"], [href*="/giai-phap-hoa-don-dien-tu"]))) > .sub-menu > .menu-item > .menu-link:not([href*="/ai-service"]):not([href*="/data-center"]):not([href*="/trang-chu-2-1"]):not([href*="/van-logistic"]):not([href*="/giai-phap-doanh-nghiep"]):not([href*="/chu-ky-so"]):not([href*="/giai-phap-hoa-don-dien-tu"])::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%27%230e6ace%27 stroke-width=%272%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3E%3Cpath d=%27M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z%27/%3E%3Cpath d=%27M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12%27/%3E%3Cpath d=%27M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17%27/%3E%3C/svg%3E");
+  }
+
+  @keyframes vhDropIn {
+    from { opacity: 0; margin-top: 6px; }
+    to   { opacity: 1; margin-top: 0; }
+  }
+}

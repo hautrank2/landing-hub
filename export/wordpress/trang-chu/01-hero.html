@@ -1,0 +1,163 @@
+<!-- ===== Vũ Hải — Hero slider (section 1). Dán vào block "HTML tùy chỉnh" của WordPress ===== -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800&display=swap&subset=vietnamese" rel="stylesheet">
+
+<style>
+  .vh-hero{--vh-primary:#0e6ace;--vh-navy:#004188;--vh-secondary:#f0f5fa;--vh-fg:#2b333d;--vh-muted:#646d78;--vh-border:#e2e8ef;
+    position:relative;width:100vw;margin-left:calc(50% - 50vw);font-family:"Nunito Sans",system-ui,sans-serif;color:var(--vh-fg);box-sizing:border-box}
+  .vh-hero *,.vh-hero *::before,.vh-hero *::after{box-sizing:border-box}
+  .vh-hero ul,.vh-hero p,.vh-hero h2{margin:0;padding:0}
+  .vh-hero a{text-decoration:none}
+  .vh-hero__viewport{overflow:hidden}
+  .vh-hero__track{display:flex;transition:transform .7s ease-out}
+  .vh-hero__slide{flex:0 0 100%;width:100%;height:calc(100svh - 80px);min-height:44rem}
+
+  .vh-banner{position:relative;isolation:isolate;display:grid;grid-template-rows:auto 1fr;height:100%;overflow:hidden;
+    background:linear-gradient(to bottom right,var(--vh-secondary),#fff,var(--vh-secondary))}
+  .vh-banner__glow{position:absolute;top:-6rem;left:-6rem;z-index:-1;width:24rem;height:24rem;border-radius:9999px;background:rgba(14,106,206,.1);filter:blur(64px)}
+  .vh-banner__text{display:flex;flex-direction:column;justify-content:center;padding:2.5rem 1.5rem 1rem}
+  .vh-badge{width:fit-content;border-radius:9999px;background:var(--vh-primary);color:#fff;padding:.375rem 1rem;font-size:.875rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase}
+  .vh-title{margin-top:1.25rem!important;font-size:1.875rem;line-height:1.25;font-weight:800;color:var(--vh-navy);text-wrap:balance}
+  .vh-points{list-style:none;margin-top:1.5rem!important;display:grid;gap:.75rem}
+  .vh-points li{display:flex;align-items:center;gap:.75rem;font-size:1rem;font-weight:600;color:var(--vh-fg)}
+  .vh-icon{display:grid;place-items:center;flex-shrink:0;width:2.25rem;height:2.25rem;border-radius:.5rem;background:#fff;color:var(--vh-primary);box-shadow:0 1px 3px rgba(0,0,0,.08)}
+  .vh-icon svg{width:1.25rem;height:1.25rem}
+  .vh-actions{margin-top:2rem;display:flex;flex-wrap:wrap;align-items:center;gap:.75rem}
+  .vh-btn{display:inline-flex;align-items:center;justify-content:center;height:3rem;padding:0 1.75rem;border-radius:.75rem;font-size:1rem;font-weight:700;border:1px solid var(--vh-primary);transition:background .2s,color .2s}
+  .vh-btn--solid{background:var(--vh-primary);color:#fff!important}
+  .vh-btn--solid:hover{background:#0b5cb4}
+  .vh-btn--outline{background:#fff;color:var(--vh-primary)!important}
+  .vh-btn--outline:hover{background:var(--vh-secondary)}
+  .vh-contact{margin-top:1.25rem!important;font-size:.875rem;color:var(--vh-muted)}
+  .vh-banner__art{display:flex;align-items:center;justify-content:center;min-height:22rem;padding:.5rem 1.5rem 3rem}
+  .vh-banner__art img{max-width:100%;max-height:70svh;width:auto;height:auto;object-fit:contain}
+
+  .vh-arrow{position:absolute;top:50%;transform:translateY(-50%);display:none;place-items:center;width:2.75rem;height:2.75rem;border:0;border-radius:9999px;background:rgba(255,255,255,.9);color:var(--vh-navy);box-shadow:0 4px 12px rgba(0,0,0,.12);cursor:pointer;padding:0}
+  .vh-arrow:hover{background:#fff}
+  .vh-arrow svg{width:1.5rem;height:1.5rem}
+  .vh-arrow--prev{left:.75rem}.vh-arrow--next{right:.75rem}
+  .vh-dots{position:absolute;left:0;right:0;bottom:.75rem;display:flex;justify-content:center;gap:.5rem}
+  .vh-dot{height:.625rem;width:.625rem;border:0;padding:0;border-radius:9999px;background:rgba(14,106,206,.3);cursor:pointer;transition:all .3s}
+  .vh-dot:hover{background:rgba(14,106,206,.5)}
+  .vh-dot[aria-current="true"]{width:2rem;background:var(--vh-primary)}
+
+  @media (min-width:640px){
+    .vh-banner__text{padding-left:3rem;padding-right:3rem}
+    .vh-banner__art{padding-left:3rem;padding-right:3rem}
+    .vh-title{font-size:2.25rem}
+    .vh-points li{font-size:1.125rem}
+  }
+  @media (min-width:768px){.vh-arrow{display:grid}}
+  @media (min-width:1024px){
+    .vh-hero__slide{min-height:36rem}
+    .vh-banner{grid-template-columns:.95fr 1.05fr;grid-template-rows:1fr}
+    .vh-banner__text{padding:4rem 1rem 4rem max(3rem,calc((100vw - 80rem)/2 + 2rem))}
+    .vh-banner__art{height:100%;padding:4rem max(3rem,calc((100vw - 80rem)/2 + 2rem)) 4rem 1rem}
+  }
+  @media (min-width:1280px){.vh-title{font-size:3rem}}
+  @media (prefers-reduced-motion:reduce){.vh-hero__track{transition:none}}
+</style>
+
+<section class="vh-hero" aria-roledescription="carousel" aria-label="Banner giới thiệu" data-interval="7000">
+  <div class="vh-hero__viewport">
+    <div class="vh-hero__track">
+
+      <!-- Slide 1: Dịch vụ AI -->
+      <div class="vh-hero__slide" role="group" aria-roledescription="slide" aria-label="1 / 2: Dịch vụ AI">
+        <div class="vh-banner">
+          <div class="vh-banner__glow" aria-hidden="true"></div>
+          <div class="vh-banner__text">
+            <span class="vh-badge">Dịch vụ AI · Cho thuê GPU</span>
+            <h2 class="vh-title">Thuê AI Server<br>Triển khai dịch vụ AI cho doanh nghiệp</h2>
+            <ul class="vh-points">
+              <li><span class="vh-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20v2M12 2v2M17 20v2M17 2v2M2 12h2M2 17h2M2 7h2M20 12h2M20 17h2M20 7h2M7 20v2M7 2v2"/><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="8" y="8" width="8" height="8" rx="1"/></svg></span>GPU NVIDIA HGX / GB200, NVLink 900 GB/s</li>
+              <li><span class="vh-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 10a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 14.286V4a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/><path d="M20 9a2 2 0 0 1 2 2v10.286a.71.71 0 0 1-1.212.502l-2.202-2.202A2 2 0 0 0 17.172 19H10a2 2 0 0 1-2-2v-1"/></svg></span>Chatbot, RAG, thị giác máy tính, fine-tuning</li>
+              <li><span class="vh-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg></span>Máy chủ riêng, dữ liệu thuộc về doanh nghiệp</li>
+              <li><span class="vh-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"/><path d="M20 2v4M22 4h-4"/><circle cx="4" cy="20" r="2"/></svg></span>Hỗ trợ triển khai và vận hành 24/7</li>
+            </ul>
+            <div class="vh-actions">
+              <a class="vh-btn vh-btn--solid" href="/ai-service/">Khám phá dịch vụ AI</a>
+              <a class="vh-btn vh-btn--outline" href="/ai-service/#tu-van">Nhận tư vấn</a>
+            </div>
+            <p class="vh-contact">vuhai.co · support@vuhai.co · 1900 232303</p>
+          </div>
+          <div class="vh-banner__art">
+            <!-- THAY src bằng ảnh đã upload lên Media -->
+            <img src="https://vuhai.co/wp-content/uploads/2026/11/vuhai-ai.png" alt="Minh hoạ dịch vụ AI của Vũ Hải: GPU server, chatbot AI, AI camera và giao thông thông minh" loading="eager" onerror="this.style.display='none'">
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2: Data center -->
+      <div class="vh-hero__slide" role="group" aria-roledescription="slide" aria-label="2 / 2: Data center">
+        <div class="vh-banner">
+          <div class="vh-banner__glow" aria-hidden="true"></div>
+          <div class="vh-banner__text">
+            <span class="vh-badge">Data center · Hạ tầng</span>
+            <h2 class="vh-title">Data center chuyên dụng<br>Điện dự phòng, làm mát, giám sát 24/7</h2>
+            <ul class="vh-points">
+              <li><span class="vh-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="8" x="2" y="2" rx="2"/><rect width="20" height="8" x="2" y="14" rx="2"/><path d="M6 6h.01M6 18h.01"/></svg></span>Thuê tủ rack, colocation, private cloud</li>
+              <li><span class="vh-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m10 20-1.25-2.5L6 18M10 4 8.75 6.5 6 6m8 14 1.25-2.5L18 18M14 4l1.25 2.5L18 6m-1 15-3-6h-4m7-12-3 6 1.5 3M2 12h6.5L10 9m10 1-1.5 2 1.5 2m2-2h-6.5L14 15M4 10l1.5 2L4 14m3 7 3-6-1.5-3M7 3l3 6h4"/></svg></span>Làm mát chất lỏng, mật độ tới 120 kW/rack</li>
+              <li><span class="vh-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15.914 4a1.5 1.5 0 0 0-2.474-1.561l-9 9A1.5 1.5 0 0 0 5.5 14h4.002a.5.5 0 0 1 .471.666L8.086 20a1.5 1.5 0 0 0 2.475 1.56l9-9A1.5 1.5 0 0 0 18.5 10h-3.997a.5.5 0 0 1-.472-.667z"/></svg></span>Cấp điện dự phòng 2N</li>
+              <li><span class="vh-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 12a9 3 0 0 0 5 2.69M21 9.3V5M3 5v14a9 3 0 0 0 6.47 2.88M12 12v4h4"/><path d="M13 20a5 5 0 0 0 9-3 4.5 4.5 0 0 0-4.5-4.5c-1.33 0-2.54.54-3.41 1.41L12 16"/></svg></span>Sao lưu, phục hồi thảm hoạ và kết nối mạng</li>
+            </ul>
+            <div class="vh-actions">
+              <a class="vh-btn vh-btn--solid" href="/data-center/">Khám phá Data center</a>
+              <a class="vh-btn vh-btn--outline" href="/data-center/#tu-van">Nhận tư vấn</a>
+            </div>
+            <p class="vh-contact">vuhai.co · support@vuhai.co · 1900 232303</p>
+          </div>
+          <div class="vh-banner__art">
+            <!-- THAY src bằng ảnh đã upload lên Media -->
+            <img src="https://vuhai.co/wp-content/uploads/2026/11/vuhai-data-center-2.png" alt="Minh hoạ data center Vũ Hải: tủ rack mật độ cao, làm mát chất lỏng, điện dự phòng 2N, mạng 400G" loading="lazy" onerror="this.style.display='none'">
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <button type="button" class="vh-arrow vh-arrow--prev" aria-label="Banner trước"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg></button>
+  <button type="button" class="vh-arrow vh-arrow--next" aria-label="Banner sau"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></button>
+  <div class="vh-dots">
+    <button type="button" class="vh-dot" aria-label="Chuyển tới banner Dịch vụ AI"></button>
+    <button type="button" class="vh-dot" aria-label="Chuyển tới banner Data center"></button>
+  </div>
+</section>
+
+<script>
+(function () {
+  document.querySelectorAll(".vh-hero").forEach(function (root) {
+    var track = root.querySelector(".vh-hero__track");
+    var slides = root.querySelectorAll(".vh-hero__slide");
+    var dots = root.querySelectorAll(".vh-dot");
+    var count = slides.length, index = 0, timer = null;
+    var interval = parseInt(root.getAttribute("data-interval"), 10) || 7000;
+
+    function go(n) {
+      index = (n + count) % count;
+      track.style.transform = "translateX(-" + index * 100 + "%)";
+      slides.forEach(function (s, i) {
+        var hidden = i !== index;
+        s.setAttribute("aria-hidden", hidden);
+        if (hidden) s.setAttribute("inert", ""); else s.removeAttribute("inert");
+      });
+      dots.forEach(function (d, i) { d.setAttribute("aria-current", i === index); });
+    }
+    function start() { stop(); if (count > 1) timer = setInterval(function () { go(index + 1); }, interval); }
+    function stop() { if (timer) clearInterval(timer); timer = null; }
+
+    root.querySelector(".vh-arrow--prev").addEventListener("click", function () { go(index - 1); });
+    root.querySelector(".vh-arrow--next").addEventListener("click", function () { go(index + 1); });
+    dots.forEach(function (d, i) { d.addEventListener("click", function () { go(i); }); });
+    root.addEventListener("mouseenter", stop);
+    root.addEventListener("mouseleave", start);
+    root.addEventListener("focusin", stop);
+    root.addEventListener("focusout", start);
+
+    go(0);
+    start();
+  });
+})();
+</script>
+<!-- ===== /Vũ Hải — Hero slider ===== -->

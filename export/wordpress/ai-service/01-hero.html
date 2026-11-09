@@ -1,0 +1,98 @@
+<!-- ===== Vũ Hải — 01. Dịch vụ AI — Hero. Dán vào block "HTML tùy chỉnh" ===== -->
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800&display=swap&subset=vietnamese" rel="stylesheet">
+<style>
+  .vhp{--vh-primary:#0e6ace;--vh-navy:#004188;--vh-secondary:#f0f5fa;--vh-fg:#202730;--vh-muted:#5a6472;--vh-border:#dbe2e9;--vh-ink:#062b5f;--vh-ink-raised:#123b75;--vh-ink-muted:#c0d0e4;--vh-ink-border:rgba(255,255,255,.16);
+    position:relative;width:100vw;margin-left:calc(50% - 50vw);padding:5rem 0;background:#fff;font-family:"Nunito Sans",system-ui,sans-serif;color:var(--vh-fg);box-sizing:border-box;scroll-margin-top:6rem}
+  .vhp *,.vhp *::before,.vhp *::after{box-sizing:border-box}
+  .vhp h1,.vhp h2,.vhp h3,.vhp p,.vhp ul,.vhp ol,.vhp dl,.vhp dt,.vhp dd{margin:0;padding:0}
+  .vhp ul,.vhp ol{list-style:none}
+  .vhp a{text-decoration:none}
+  .vhp svg{display:block}
+  .vhp--alt{background:var(--vh-secondary)}
+  .vhp--ink{background:var(--vh-ink);color:#fff}
+  .vhp__wrap{max-width:80rem;margin:0 auto;padding:0 1rem}
+  .vhp-head{max-width:48rem}
+  .vhp-head--center{margin:0 auto;text-align:center}
+  .vhp-eyebrow{font-size:.875rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--vh-primary)}
+  .vhp-title{margin-top:.5rem!important;font-size:1.875rem;line-height:1.25;font-weight:800;color:var(--vh-navy);text-wrap:balance}
+  .vhp-desc{margin-top:1rem!important;font-size:1.125rem;line-height:1.65;color:var(--vh-muted)}
+  .vhp--ink .vhp-eyebrow,.vhp--ink .vhp-desc{color:var(--vh-ink-muted)}
+  .vhp--ink .vhp-title{color:#fff}
+  .vhp-grid{margin-top:2.5rem;display:grid;gap:1.25rem}
+  .vhp-card{display:flex;flex-direction:column;border-radius:1rem;background:#fff;padding:1.5rem;box-shadow:0 1px 3px rgba(0,0,0,.06)}
+  .vhp-card--line{border:1px solid var(--vh-border);box-shadow:none}
+  .vhp-card--row{flex-direction:row;gap:1.25rem}
+  .vhp-icon{display:grid;place-items:center;flex-shrink:0;width:3rem;height:3rem;border-radius:.75rem;background:var(--vh-secondary);color:var(--vh-primary)}
+  .vhp-icon svg{width:1.5rem;height:1.5rem}
+  .vhp-card h3{margin-top:1rem!important;font-size:1.25rem;font-weight:800;color:var(--vh-navy)}
+  .vhp-card--row h3{margin-top:0!important}
+  .vhp-card--sm h3{font-size:1.125rem}
+  .vhp-card p{margin-top:.5rem!important;line-height:1.65;color:var(--vh-muted)}
+  .vhp-checks{margin-top:1.25rem!important;display:grid;gap:.625rem;font-size:.875rem;flex:1;align-content:start}
+  .vhp-checks li{display:flex;align-items:flex-start;gap:.5rem}
+  .vhp-checks svg{margin-top:.125rem;width:1rem;height:1rem;flex-shrink:0;color:var(--vh-primary)}
+  .vhp-more{margin-top:1.5rem;font-weight:700;color:var(--vh-primary)!important}
+  .vhp-more:hover{text-decoration:underline}
+  .vhp-tag{border-radius:9999px;background:var(--vh-secondary);padding:.25rem .75rem;font-size:.75rem;font-weight:700;color:var(--vh-primary)}
+  .vhp-between{display:flex;align-items:center;justify-content:space-between}
+  @media (min-width:640px){.vhp__wrap{padding:0 1.5rem}.vhp-title{font-size:2.25rem}.vhp-grid--4{grid-template-columns:repeat(2,1fr)}}
+  @media (min-width:768px){.vhp-grid--4md,.vhp-grid--2{grid-template-columns:repeat(2,1fr)}}
+  @media (min-width:1024px){.vhp__wrap{padding:0 2rem}.vhp-grid--4{grid-template-columns:repeat(4,1fr)}}
+  @media (min-width:1280px){.vhp-grid--4md{grid-template-columns:repeat(4,1fr)}}
+</style>
+<style>
+  .vhp-hero{padding:0;overflow:hidden;isolation:isolate}
+  .vhp-hero::before{content:"";position:absolute;inset:0;z-index:-1;background-image:linear-gradient(to right,rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(to bottom,rgba(255,255,255,.05) 1px,transparent 1px);background-size:64px 64px;-webkit-mask-image:linear-gradient(to bottom,#000,transparent);mask-image:linear-gradient(to bottom,#000,transparent)}
+  .vhp-hero::after{content:"";position:absolute;top:-8rem;right:-8rem;z-index:-1;width:32rem;height:32rem;border-radius:9999px;background:rgba(14,106,206,.3);filter:blur(64px)}
+  .vhp-hero__grid{display:grid;align-items:center;gap:2.5rem;padding-top:4rem;padding-bottom:4rem}
+  .vhp-hero__badge{display:inline-flex;border-radius:9999px;background:var(--vh-primary);padding:.375rem 1rem;font-size:.875rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase}
+  .vhp-hero h1{margin-top:1.25rem!important;font-size:2.25rem;line-height:1.1;font-weight:800;color:#fff;text-wrap:balance}
+  .vhp-hero__lead{margin-top:1.5rem!important;max-width:36rem;font-size:1.125rem;line-height:1.65;color:var(--vh-ink-muted)}
+  .vhp-hero__actions{margin-top:2rem;display:flex;flex-wrap:wrap;gap:.75rem}
+  .vhp-btn{display:inline-flex;align-items:center;gap:.5rem;height:3rem;padding:0 1.75rem;border-radius:.75rem;font-size:1rem;font-weight:700;transition:background .2s}
+  .vhp-btn svg{width:1.25rem;height:1.25rem}
+  .vhp-btn--light{background:#fff;color:var(--vh-navy)!important}
+  .vhp-btn--light:hover{background:rgba(255,255,255,.9)}
+  .vhp-btn--ghost{border:1px solid rgba(255,255,255,.4);color:#fff!important}
+  .vhp-btn--ghost:hover{background:rgba(255,255,255,.1)}
+  .vhp-hero__art{display:flex;align-items:center;justify-content:center;min-height:22rem}
+  .vhp-hero__art img{max-width:100%;max-height:32rem;width:auto;height:auto;object-fit:contain}
+  .vhp-hero__stats{border-top:1px solid var(--vh-ink-border)}
+  .vhp-hero__stats .vhp__wrap{display:grid;grid-template-columns:repeat(2,1fr)}
+  .vhp-hero__stat{padding:1.5rem 0}
+  .vhp-hero__stat dt{font-size:.875rem;color:var(--vh-ink-muted)}
+  .vhp-hero__stat dd{margin-top:.25rem!important;font-size:1.25rem;font-weight:800}
+  @media (min-width:640px){.vhp-hero h1{font-size:3rem}.vhp-hero__stat dd{font-size:1.5rem}}
+  @media (min-width:1024px){
+    .vhp-hero__grid{grid-template-columns:1.1fr .9fr;padding-top:6rem;padding-bottom:6rem}
+    .vhp-hero h1{font-size:3.75rem}
+    .vhp-hero__stats .vhp__wrap{grid-template-columns:repeat(4,1fr)}
+    .vhp-hero__stat{padding:1.5rem}
+    .vhp-hero__stat:first-child{padding-left:0}
+  }
+</style>
+<section id="top" class="vhp vhp--ink vhp-hero">
+  <div class="vhp__wrap vhp-hero__grid">
+    <div>
+      <p class="vhp-hero__badge">Danh mục chính · Cho thuê</p>
+      <h1>Thuê AI Server, triển khai dịch vụ AI của riêng bạn</h1>
+      <p class="vhp-hero__lead">Hạ tầng GPU hiệu năng cao cho doanh nghiệp: thuê theo giờ, theo tháng hoặc cụm riêng, kèm đội ngũ hỗ trợ dựng chatbot, RAG, thị giác máy tính và API suy luận.</p>
+      <div class="vhp-hero__actions">
+        <a class="vhp-btn vhp-btn--light" href="#tu-van">Nhận tư vấn <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+        <a class="vhp-btn vhp-btn--ghost" href="tel:1900232303"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/></svg> 1900 232303</a>
+      </div>
+    </div>
+    <div class="vhp-hero__art">
+      <img src="https://vuhai.co/wp-content/uploads/2026/11/vuhai-ai.png" alt="Minh hoạ dịch vụ AI của Vũ Hải: GPU server, chatbot AI, AI camera và giao thông thông minh" loading="eager" onerror="this.style.display='none'">
+    </div>
+  </div>
+  <dl class="vhp-hero__stats">
+    <div class="vhp__wrap">
+      <div class="vhp-hero__stat"><dt>Liên kết GPU</dt><dd>NVLink 900 GB/s</dd></div>
+      <div class="vhp-hero__stat"><dt>Băng thông HBM3e</dt><dd>3,35 TB/s</dd></div>
+      <div class="vhp-hero__stat"><dt>Mạng cụm</dt><dd>InfiniBand 400/800G</dd></div>
+      <div class="vhp-hero__stat"><dt>Hỗ trợ vận hành</dt><dd>24/7/365</dd></div>
+    </div>
+  </dl>
+</section>
+<!-- ===== /01. Dịch vụ AI — Hero ===== -->
